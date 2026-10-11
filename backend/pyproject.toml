@@ -1,0 +1,43 @@
+[project]
+name = "lienline"
+version = "0.1.0"
+description = "LienLine: provably proportionate bank holds for cyber-fraud complaints. Traces the money, liens only the traceable amount, and verifies every number."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Asish Kumar", email = "officialasishkumar@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "httpx>=0.28",
+    "pydantic>=2.10",
+    "uvicorn[standard]>=0.32",
+]
+
+[project.scripts]
+lienline = "lienline.server:run"
+
+[dependency-groups]
+dev = ["pytest>=8.3", "hypothesis>=6.120"]
+
+[build-system]
+requires = ["uv_build>=0.8,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "lienline"
+module-root = ""
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient` is deprecated"]
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["lienline/llm.py"]  # vendored from the shared kit, kept byte-close to upstream
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false

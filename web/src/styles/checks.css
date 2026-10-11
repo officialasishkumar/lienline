@@ -1,0 +1,188 @@
+.checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.checks-col {
+  display: grid;
+  gap: 12px;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.section-title .muted {
+  margin-left: auto;
+  font-size: 11.5px;
+}
+.section-title.sub {
+  margin-top: 14px;
+  font-size: 15px;
+}
+.clock-list,
+.vcheck-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.clock {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  display: grid;
+  gap: 8px;
+  --c: var(--warn);
+}
+.clock.s-met {
+  --c: var(--human);
+}
+.clock.s-breached {
+  --c: var(--taint);
+  border-color: var(--taint-line);
+}
+.clock-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+.clock-top b {
+  font-size: 14px;
+  font-weight: 600;
+}
+.clock-state {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c);
+  white-space: nowrap;
+}
+.clock-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.clock-bar span {
+  display: block;
+  height: 100%;
+  background: var(--c);
+  transition: width 1s linear;
+}
+.clock-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.clock-count {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c);
+}
+.clock-rule {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.clock-rule a {
+  color: var(--ink-2);
+  text-decoration-color: var(--line-2);
+  text-underline-offset: 2px;
+}
+.vcheck-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.vc-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.vc-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.6;
+}
+.vcheck-list .ok .vc-icon {
+  background: var(--human-soft);
+  color: var(--human);
+}
+.vcheck-list .bad .vc-icon {
+  background: var(--taint-soft);
+  color: var(--taint);
+}
+.vcheck-list b {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.vc-detail {
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+.facts {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.facts > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 9px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.facts > div:last-child {
+  border-bottom: 0;
+}
+.facts dt {
+  color: var(--ink-3);
+}
+.facts dd {
+  margin: 0;
+}
+.narrative {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--line-2);
+  font-size: 16px;
+  color: var(--ink-2);
+  font-style: italic;
+  background: var(--surface);
+  border-radius: 0 10px 10px 0;
+}
+.narrative.notice {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.6;
+  border-left-color: var(--code);
+}
+@media (max-width: 900px) {
+  .checks {
+    grid-template-columns: 1fr;
+  }
+}

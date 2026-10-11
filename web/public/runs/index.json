@@ -1,0 +1,50 @@
+[
+ {
+  "case_id": "c1-archana",
+  "title": "₹980 dispute, ₹2.51 crore frozen",
+  "summary": "A ₹980 UPI spend by a mule froze a liquor merchant's entire ₹2.51 crore balance; LienLine liens ₹980 and releases the rest.",
+  "accounts": 4,
+  "banks": 3,
+  "lost": 9800000,
+  "held_before": 2510357000,
+  "held_after": 455000,
+  "status": "verified",
+  "model_calls": 8
+ },
+ {
+  "case_id": "c2-digital-arrest",
+  "title": "₹18.4 lakh 'digital arrest', 8 accounts frozen",
+  "summary": "A retired professor's ₹18.4 lakh fans out across 4 banks in 40 minutes; LienLine liens each account's traceable share and releases a freelancer paid for real work.",
+  "accounts": 9,
+  "banks": 4,
+  "lost": 184000000,
+  "held_before": 61100000,
+  "held_after": 28800000,
+  "status": "verified",
+  "model_calls": 13
+ },
+ {
+  "case_id": "c3-rules-disagree",
+  "title": "One distributor, four tracing rules, four answers",
+  "summary": "₹4.5 lakh of fraud money mixes into a pharma distributor's busy account; FIFO, LIFO, pro-rata and LIBR disagree, and LienLine shows the range and why LIBR is used.",
+  "accounts": 4,
+  "banks": 3,
+  "lost": 60000000,
+  "held_before": 165580000,
+  "held_after": 35580000,
+  "status": "verified",
+  "model_calls": 9
+ },
+ {
+  "case_id": "c4-hardened-mule",
+  "title": "A mule on 7 complaints: full freeze, justified",
+  "summary": "A 74-day-old current account on the suspect registry, linked to 7 complaints, passes 98% of its money through; LienLine justifies a full freeze and still liens a kirana store only ₹640.",
+  "accounts": 4,
+  "banks": 4,
+  "lost": 32000000,
+  "held_before": 10530000,
+  "held_after": 2130000,
+  "status": "verified",
+  "model_calls": 8
+ }
+]

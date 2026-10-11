@@ -1,0 +1,1998 @@
+{
+ "case_id": "c1-archana",
+ "title": "₹980 dispute, ₹2.51 crore frozen",
+ "summary": "A ₹980 UPI spend by a mule froze a liquor merchant's entire ₹2.51 crore balance; LienLine liens ₹980 and releases the rest.",
+ "generated_at": "2026-10-11T23:43:27+05:30",
+ "model": {
+  "backend": "ollama",
+  "chat_model": "gemma4:e4b",
+  "calls": 8,
+  "tokens": 9124
+ },
+ "complaint": {
+  "ack_no": "31509260012345",
+  "filed_at": "2026-09-14T13:20:00+05:30",
+  "victim": {
+   "name": "Sunita Rao",
+   "account_id": "A1"
+  },
+  "amount_lost": 9800000,
+  "channel": "IMPS",
+  "narrative": "I got a call at 10:50 am on 14 Sep from a man saying my bank KYC had expired and the account would be blocked. He sent a link and I entered my details. At 11:02 Rs 98,000 was debited by IMPS to account XXXX9834 at Sahyadri Bank, UTR 626152099011. I called 1930 at 1:10 pm.",
+  "police_station": "Cyber PS, Bhopal",
+  "io": "SI R. Verma"
+ },
+ "notice": {
+  "text": "NOTICE UNDER SECTION 106 BNSS\nFrom: SI R. Verma, Cyber PS, Bhopal\nDate: 16 Sep 2026\nNCRP acknowledgement: 31509260012345\n\nThe following accounts have received proceeds of cyber fraud reported on NCRP. You are directed to put on hold the disputed amounts mentioned against each account and preserve KYC and statements.\n\n1. A/c XXXX9834 (Sahyadri Bank), Vikas Kumar: ₹98,000.00 via UTR 626152099011\n2. A/c XXXX8653 (Konark Small Finance Bank), Imran Shaikh: ₹45,000.00 via UTR 626812396180\n3. A/c XXXX6876 (Sahyadri Bank), Narmada Wines & Spirits: ₹980.00 via UTR 626843483256",
+  "issued_at": "2026-09-16T12:00:00+05:30",
+  "section": "106 BNSS",
+  "flagged": [
+   {
+    "account_id": "A2",
+    "amount": 9800000
+   },
+   {
+    "account_id": "A4",
+    "amount": 4500000
+   },
+   {
+    "account_id": "A3",
+    "amount": 98000
+   }
+  ]
+ },
+ "banks": [
+  {
+   "id": "NRB",
+   "name": "Narmada Bank",
+   "kind": "public"
+  },
+  {
+   "id": "SHB",
+   "name": "Sahyadri Bank",
+   "kind": "private"
+  },
+  {
+   "id": "KSF",
+   "name": "Konark Small Finance Bank",
+   "kind": "small_finance"
+  }
+ ],
+ "accounts": [
+  {
+   "id": "A1",
+   "bank": "NRB",
+   "masked": "XXXX4190",
+   "holder": "Sunita Rao",
+   "kind": "savings",
+   "role": "victim",
+   "kyc_age_days": 3650,
+   "opening_balance": 14000000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A2",
+   "bank": "SHB",
+   "masked": "XXXX9834",
+   "holder": "Vikas Kumar",
+   "kind": "savings",
+   "role": "mule_l1",
+   "kyc_age_days": 41,
+   "opening_balance": 35000,
+   "complaints_linked": 2,
+   "registry_hit": true
+  },
+  {
+   "id": "A3",
+   "bank": "SHB",
+   "masked": "XXXX6876",
+   "holder": "Narmada Wines & Spirits",
+   "kind": "merchant",
+   "role": "merchant",
+   "kyc_age_days": 2900,
+   "opening_balance": 2504902000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A4",
+   "bank": "KSF",
+   "masked": "XXXX8653",
+   "holder": "Imran Shaikh",
+   "kind": "savings",
+   "role": "mule_l2",
+   "kyc_age_days": 120,
+   "opening_balance": 120000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  }
+ ],
+ "transactions": [
+  {
+   "id": "T1",
+   "utr": "626152099011",
+   "ts": "2026-09-14T11:02:00+05:30",
+   "from": "A1",
+   "to": "A2",
+   "amount": 9800000,
+   "channel": "IMPS",
+   "tainted_origin": true,
+   "note": "Paid to 'KYC update' caller"
+  },
+  {
+   "id": "T2",
+   "utr": "626812396180",
+   "ts": "2026-09-14T11:09:00+05:30",
+   "from": "A2",
+   "to": "A4",
+   "amount": 4500000,
+   "channel": "IMPS",
+   "tainted_origin": false,
+   "note": "Transfer to second-layer account"
+  },
+  {
+   "id": "T3",
+   "utr": "626640650868",
+   "ts": "2026-09-14T11:15:00+05:30",
+   "from": "A2",
+   "to": "CASH",
+   "amount": 1000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "ATM withdrawal, Bhopal"
+  },
+  {
+   "id": "T4",
+   "utr": "626330342282",
+   "ts": "2026-09-14T11:16:00+05:30",
+   "from": "A2",
+   "to": "CASH",
+   "amount": 1000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "ATM withdrawal, Bhopal"
+  },
+  {
+   "id": "T5",
+   "utr": "626746438569",
+   "ts": "2026-09-14T11:31:00+05:30",
+   "from": "A2",
+   "to": "EXT",
+   "amount": 3000000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "To a P2P crypto seller outside traced banks"
+  },
+  {
+   "id": "T6",
+   "utr": "626338044533",
+   "ts": "2026-09-14T11:40:00+05:30",
+   "from": "A4",
+   "to": "CASH",
+   "amount": 2000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "ATM withdrawal, Indore"
+  },
+  {
+   "id": "T7",
+   "utr": "626409798605",
+   "ts": "2026-09-14T11:42:00+05:30",
+   "from": "A4",
+   "to": "CASH",
+   "amount": 2000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "ATM withdrawal, Indore"
+  },
+  {
+   "id": "T8",
+   "utr": "626621262534",
+   "ts": "2026-09-14T12:05:00+05:30",
+   "from": "A4",
+   "to": "EXT",
+   "amount": 500000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "To a wallet outside traced banks"
+  },
+  {
+   "id": "T9",
+   "utr": "626843483256",
+   "ts": "2026-09-14T19:48:00+05:30",
+   "from": "A2",
+   "to": "A3",
+   "amount": 98000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "Counter purchase at liquor shop"
+  },
+  {
+   "id": "T10",
+   "utr": "626940753405",
+   "ts": "2026-09-15T21:30:00+05:30",
+   "from": "EXT",
+   "to": "A3",
+   "amount": 34000000,
+   "channel": "POS",
+   "tainted_origin": false,
+   "note": "Card and UPI settlement for the day"
+  },
+  {
+   "id": "T11",
+   "utr": "626328037817",
+   "ts": "2026-09-15T22:05:00+05:30",
+   "from": "A3",
+   "to": "EXT",
+   "amount": 29000000,
+   "channel": "RTGS",
+   "tainted_origin": false,
+   "note": "Payment to distillery for stock"
+  }
+ ],
+ "grievances": [
+  {
+   "account_id": "A3",
+   "received_at": "2026-09-22T11:00:00+05:30",
+   "forwarded_at": "2026-09-26T16:00:00+05:30",
+   "text": "Our entire current account of ₹2.51 crore is frozen over a ₹980 counter sale. We cannot pay excise duty, salaries or the distillery. We ask that only the disputed amount be held."
+  }
+ ],
+ "trace": {
+  "as_of": "2026-10-12T10:00:00+05:30",
+  "rules": [
+   "FIFO",
+   "LIFO",
+   "PRO_RATA",
+   "LIBR"
+  ],
+  "policy_rule": "LIBR",
+  "accounts": {
+   "A2": {
+    "by_rule": {
+     "FIFO": 237000,
+     "LIFO": 202000,
+     "PRO_RATA": 236157,
+     "LIBR": 237000
+    },
+    "balance_now": 237000,
+    "series": [
+     {
+      "ts": "2026-09-14T11:02:00+05:30",
+      "txn": null,
+      "balance": 35000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-09-14T11:02:00+05:30",
+      "txn": "T1",
+      "balance": 9835000,
+      "tainted": {
+       "FIFO": 9800000,
+       "LIFO": 9800000,
+       "PRO_RATA": 9800000,
+       "LIBR": 9800000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:09:00+05:30",
+      "txn": "T2",
+      "balance": 5335000,
+      "tainted": {
+       "FIFO": 5335000,
+       "LIFO": 5300000,
+       "PRO_RATA": 5316015,
+       "LIBR": 5335000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:15:00+05:30",
+      "txn": "T3",
+      "balance": 4335000,
+      "tainted": {
+       "FIFO": 4335000,
+       "LIFO": 4300000,
+       "PRO_RATA": 4319574,
+       "LIBR": 4335000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:16:00+05:30",
+      "txn": "T4",
+      "balance": 3335000,
+      "tainted": {
+       "FIFO": 3335000,
+       "LIFO": 3300000,
+       "PRO_RATA": 3323133,
+       "LIBR": 3335000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:31:00+05:30",
+      "txn": "T5",
+      "balance": 335000,
+      "tainted": {
+       "FIFO": 335000,
+       "LIFO": 300000,
+       "PRO_RATA": 333808,
+       "LIBR": 335000
+      }
+     },
+     {
+      "ts": "2026-09-14T19:48:00+05:30",
+      "txn": "T9",
+      "balance": 237000,
+      "tainted": {
+       "FIFO": 237000,
+       "LIFO": 202000,
+       "PRO_RATA": 236157,
+       "LIBR": 237000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T2",
+      "to": "A4",
+      "amount": 4500000,
+      "tainted": {
+       "FIFO": 4465000,
+       "LIFO": 4500000,
+       "PRO_RATA": 4483985,
+       "LIBR": 4465000
+      }
+     },
+     {
+      "txn": "T3",
+      "to": "CASH",
+      "amount": 1000000,
+      "tainted": {
+       "FIFO": 1000000,
+       "LIFO": 1000000,
+       "PRO_RATA": 996441,
+       "LIBR": 1000000
+      }
+     },
+     {
+      "txn": "T4",
+      "to": "CASH",
+      "amount": 1000000,
+      "tainted": {
+       "FIFO": 1000000,
+       "LIFO": 1000000,
+       "PRO_RATA": 996441,
+       "LIBR": 1000000
+      }
+     },
+     {
+      "txn": "T5",
+      "to": "EXT",
+      "amount": 3000000,
+      "tainted": {
+       "FIFO": 3000000,
+       "LIFO": 3000000,
+       "PRO_RATA": 2989325,
+       "LIBR": 3000000
+      }
+     },
+     {
+      "txn": "T9",
+      "to": "A3",
+      "amount": 98000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 97651,
+       "LIBR": 98000
+      }
+     }
+    ]
+   },
+   "A3": {
+    "by_rule": {
+     "FIFO": 98000,
+     "LIFO": 98000,
+     "PRO_RATA": 96536,
+     "LIBR": 98000
+    },
+    "balance_now": 2510000000,
+    "series": [
+     {
+      "ts": "2026-09-14T11:02:00+05:30",
+      "txn": null,
+      "balance": 2504902000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-09-14T19:48:00+05:30",
+      "txn": "T9",
+      "balance": 2505000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 97651,
+       "LIBR": 98000
+      }
+     },
+     {
+      "ts": "2026-09-15T21:30:00+05:30",
+      "txn": "T10",
+      "balance": 2539000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 97651,
+       "LIBR": 98000
+      }
+     },
+     {
+      "ts": "2026-09-15T22:05:00+05:30",
+      "txn": "T11",
+      "balance": 2510000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 96536,
+       "LIBR": 98000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T11",
+      "to": "EXT",
+      "amount": 29000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 1115,
+       "LIBR": 0
+      }
+     }
+    ]
+   },
+   "A4": {
+    "by_rule": {
+     "FIFO": 119067,
+     "LIFO": 0,
+     "PRO_RATA": 116468,
+     "LIBR": 120000
+    },
+    "balance_now": 120000,
+    "series": [
+     {
+      "ts": "2026-09-14T11:02:00+05:30",
+      "txn": null,
+      "balance": 120000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-09-14T11:09:00+05:30",
+      "txn": "T2",
+      "balance": 4620000,
+      "tainted": {
+       "FIFO": 4465000,
+       "LIFO": 4500000,
+       "PRO_RATA": 4483985,
+       "LIBR": 4465000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:40:00+05:30",
+      "txn": "T6",
+      "balance": 2620000,
+      "tainted": {
+       "FIFO": 2599623,
+       "LIFO": 2500000,
+       "PRO_RATA": 2542866,
+       "LIBR": 2620000
+      }
+     },
+     {
+      "ts": "2026-09-14T11:42:00+05:30",
+      "txn": "T7",
+      "balance": 620000,
+      "tainted": {
+       "FIFO": 615178,
+       "LIFO": 500000,
+       "PRO_RATA": 601747,
+       "LIBR": 620000
+      }
+     },
+     {
+      "ts": "2026-09-14T12:05:00+05:30",
+      "txn": "T8",
+      "balance": 120000,
+      "tainted": {
+       "FIFO": 119067,
+       "LIFO": 0,
+       "PRO_RATA": 116468,
+       "LIBR": 120000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T6",
+      "to": "CASH",
+      "amount": 2000000,
+      "tainted": {
+       "FIFO": 1865377,
+       "LIFO": 2000000,
+       "PRO_RATA": 1941119,
+       "LIBR": 1845000
+      }
+     },
+     {
+      "txn": "T7",
+      "to": "CASH",
+      "amount": 2000000,
+      "tainted": {
+       "FIFO": 1984445,
+       "LIFO": 2000000,
+       "PRO_RATA": 1941119,
+       "LIBR": 2000000
+      }
+     },
+     {
+      "txn": "T8",
+      "to": "EXT",
+      "amount": 500000,
+      "tainted": {
+       "FIFO": 496111,
+       "LIFO": 500000,
+       "PRO_RATA": 485279,
+       "LIBR": 500000
+      }
+     }
+    ]
+   }
+  },
+  "edges": [
+   {
+    "txn": "T1",
+    "from": "A1",
+    "to": "A2",
+    "amount": 9800000,
+    "tainted": {
+     "FIFO": 9800000,
+     "LIFO": 9800000,
+     "PRO_RATA": 9800000,
+     "LIBR": 9800000
+    }
+   },
+   {
+    "txn": "T2",
+    "from": "A2",
+    "to": "A4",
+    "amount": 4500000,
+    "tainted": {
+     "FIFO": 4465000,
+     "LIFO": 4500000,
+     "PRO_RATA": 4483985,
+     "LIBR": 4465000
+    }
+   },
+   {
+    "txn": "T3",
+    "from": "A2",
+    "to": "CASH",
+    "amount": 1000000,
+    "tainted": {
+     "FIFO": 1000000,
+     "LIFO": 1000000,
+     "PRO_RATA": 996441,
+     "LIBR": 1000000
+    }
+   },
+   {
+    "txn": "T4",
+    "from": "A2",
+    "to": "CASH",
+    "amount": 1000000,
+    "tainted": {
+     "FIFO": 1000000,
+     "LIFO": 1000000,
+     "PRO_RATA": 996441,
+     "LIBR": 1000000
+    }
+   },
+   {
+    "txn": "T5",
+    "from": "A2",
+    "to": "EXT",
+    "amount": 3000000,
+    "tainted": {
+     "FIFO": 3000000,
+     "LIFO": 3000000,
+     "PRO_RATA": 2989325,
+     "LIBR": 3000000
+    }
+   },
+   {
+    "txn": "T6",
+    "from": "A4",
+    "to": "CASH",
+    "amount": 2000000,
+    "tainted": {
+     "FIFO": 1865377,
+     "LIFO": 2000000,
+     "PRO_RATA": 1941119,
+     "LIBR": 1845000
+    }
+   },
+   {
+    "txn": "T7",
+    "from": "A4",
+    "to": "CASH",
+    "amount": 2000000,
+    "tainted": {
+     "FIFO": 1984445,
+     "LIFO": 2000000,
+     "PRO_RATA": 1941119,
+     "LIBR": 2000000
+    }
+   },
+   {
+    "txn": "T8",
+    "from": "A4",
+    "to": "EXT",
+    "amount": 500000,
+    "tainted": {
+     "FIFO": 496111,
+     "LIFO": 500000,
+     "PRO_RATA": 485279,
+     "LIBR": 500000
+    }
+   },
+   {
+    "txn": "T9",
+    "from": "A2",
+    "to": "A3",
+    "amount": 98000,
+    "tainted": {
+     "FIFO": 98000,
+     "LIFO": 98000,
+     "PRO_RATA": 97651,
+     "LIBR": 98000
+    }
+   },
+   {
+    "txn": "T10",
+    "from": "EXT",
+    "to": "A3",
+    "amount": 34000000,
+    "tainted": {
+     "FIFO": 0,
+     "LIFO": 0,
+     "PRO_RATA": 0,
+     "LIBR": 0
+    }
+   },
+   {
+    "txn": "T11",
+    "from": "A3",
+    "to": "EXT",
+    "amount": 29000000,
+    "tainted": {
+     "FIFO": 0,
+     "LIFO": 0,
+     "PRO_RATA": 1115,
+     "LIBR": 0
+    }
+   }
+  ],
+  "conservation": {
+   "lost": 9800000,
+   "held": 455000,
+   "cashed_out": 5845000,
+   "untraced": 3500000
+  },
+  "conservation_by_rule": {
+   "FIFO": {
+    "lost": 9800000,
+    "held": 454067,
+    "cashed_out": 5849822,
+    "untraced": 3496111
+   },
+   "LIFO": {
+    "lost": 9800000,
+    "held": 300000,
+    "cashed_out": 6000000,
+    "untraced": 3500000
+   },
+   "PRO_RATA": {
+    "lost": 9800000,
+    "held": 449161,
+    "cashed_out": 5875120,
+    "untraced": 3475719
+   },
+   "LIBR": {
+    "lost": 9800000,
+    "held": 455000,
+    "cashed_out": 5845000,
+    "untraced": 3500000
+   }
+  }
+ },
+ "decisions": [
+  {
+   "account_id": "A2",
+   "action": "full_freeze",
+   "amount": 237000,
+   "current_hold": 237000,
+   "released_by_change": 0,
+   "reasons": [
+    {
+     "text": "The victim's money arrived via T1 (₹98,000.00 of ₹98,000.00 from A1). The balance fell to ₹2,370.00 after T9, which caps what can still be traced: ₹2,370.00 under LIBR (lowest intermediate balance).",
+     "refs": [
+      "T1",
+      "A1",
+      "A2",
+      "T9"
+     ]
+    },
+    {
+     "text": "Full freeze justified by 4 mule signals: On the I4C suspect registry; Account opened 41 days ago; 98% of available funds passed straight through; Half of T1 moved on within 29 minutes. The amount traceable from this complaint alone is ₹2,370.00 under LIBR; the whole balance is held because of these signals, not this complaint's amount.",
+     "refs": [
+      "A2",
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T9"
+     ]
+    },
+    {
+     "text": "Other tracing rules give FIFO ₹2,370.00, LIFO ₹2,020.00, PRO_RATA ₹2,361.57. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+     "refs": [
+      "A2"
+     ]
+    }
+   ],
+   "confidence": "high",
+   "range": {
+    "min": 202000,
+    "max": 237000
+   }
+  },
+  {
+   "account_id": "A3",
+   "action": "lien",
+   "amount": 98000,
+   "current_hold": 2510000000,
+   "released_by_change": 2509902000,
+   "reasons": [
+    {
+     "text": "₹980.00 of the victim's money is identifiable here under LIBR: it arrived via T9 (₹980.00 of ₹980.00 from A2), and the balance never fell below it afterwards.",
+     "refs": [
+      "T9",
+      "A2",
+      "A3"
+     ]
+    },
+    {
+     "text": "The current hold of ₹2,51,00,000.00 covers the whole balance. MP High Court, Archana v State of MP, 27 Jul 2026 and Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026 limit a hold to the identifiable disputed amount, so ₹2,50,99,020.00 is released.",
+     "refs": [
+      "A3"
+     ]
+    },
+    {
+     "text": "Other tracing rules give FIFO ₹980.00, LIFO ₹980.00, PRO_RATA ₹965.36. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+     "refs": [
+      "A3"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "range": {
+    "min": 96536,
+    "max": 98000
+   }
+  },
+  {
+   "account_id": "A4",
+   "action": "lien",
+   "amount": 120000,
+   "current_hold": 120000,
+   "released_by_change": 0,
+   "reasons": [
+    {
+     "text": "The victim's money arrived via T2 (₹44,650.00 of ₹45,000.00 from A2). The balance fell to ₹1,200.00 after T8, which caps what can still be traced: ₹1,200.00 under LIBR (lowest intermediate balance).",
+     "refs": [
+      "T2",
+      "A2",
+      "A4",
+      "T8"
+     ]
+    },
+    {
+     "text": "Mule signals present (Account opened 120 days ago; 97% of available funds passed straight through), but no registry hit and fewer than 3 linked complaints, so a full freeze is not justified.",
+     "refs": [
+      "A4",
+      "T6",
+      "T7",
+      "T8"
+     ]
+    },
+    {
+     "text": "Other tracing rules give FIFO ₹1,190.67, LIFO ₹0.00, PRO_RATA ₹1,164.68. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+     "refs": [
+      "A4"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "range": {
+    "min": 0,
+    "max": 120000
+   }
+  }
+ ],
+ "clocks": [
+  {
+   "id": "grievance_forward-A3",
+   "account_id": "A3",
+   "label": "Bank forwards the holder's grievance to the online Grievance Module (7 days; source does not state the start, measured from receipt)",
+   "start": "2026-09-22T11:00:00+05:30",
+   "due": "2026-09-29T11:00:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1)",
+   "source": "https://www.prashantkanha.com/ncrp-cfcfrms-cyber-fraud-sop-2026/",
+   "status": "met"
+  },
+  {
+   "id": "io_decision-A3",
+   "account_id": "A3",
+   "label": "IO decides on the grievance or the District Grievance Officer is auto-notified (15 days; source does not state the start, measured from receipt)",
+   "start": "2026-09-22T11:00:00+05:30",
+   "due": "2026-10-07T11:00:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1)",
+   "source": "https://www.prashantkanha.com/ncrp-cfcfrms-cyber-fraud-sop-2026/",
+   "status": "breached"
+  },
+  {
+   "id": "lea_notice-A3",
+   "account_id": "A3",
+   "label": "Bank notifies the police 15 days before the 90-day hold period ends",
+   "start": "2026-09-22T11:00:00+05:30",
+   "due": "2026-12-06T11:00:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1)",
+   "source": "https://www.prashantkanha.com/ncrp-cfcfrms-cyber-fraud-sop-2026/",
+   "status": "running"
+  },
+  {
+   "id": "hold_review-A3",
+   "account_id": "A3",
+   "label": "No lawful direction within 90 days of the bank raising the grievance: bank may remove the hold after enhanced due diligence",
+   "start": "2026-09-22T11:00:00+05:30",
+   "due": "2026-12-21T11:00:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1)",
+   "source": "https://www.prashantkanha.com/ncrp-cfcfrms-cyber-fraud-sop-2026/",
+   "status": "running"
+  },
+  {
+   "id": "proportionate_hold-A2",
+   "account_id": "A2",
+   "label": "Hold limited to the identifiable disputed amount (no duration stated in the cited report; applies from the moment of the hold)",
+   "start": "2026-09-16T12:00:00+05:30",
+   "due": "2026-09-16T12:00:00+05:30",
+   "rule": "MP High Court, Archana v State of MP, 27 Jul 2026; Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026",
+   "source": "https://www.livelaw.in/high-court/madhya-pradesh-high-court/freezing-bank-accounts-guidelines-cyberc",
+   "status": "met"
+  },
+  {
+   "id": "proportionate_hold-A3",
+   "account_id": "A3",
+   "label": "Hold limited to the identifiable disputed amount (no duration stated in the cited report; applies from the moment of the hold)",
+   "start": "2026-09-16T12:00:00+05:30",
+   "due": "2026-09-16T12:00:00+05:30",
+   "rule": "MP High Court, Archana v State of MP, 27 Jul 2026; Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026",
+   "source": "https://www.livelaw.in/high-court/madhya-pradesh-high-court/freezing-bank-accounts-guidelines-cyberc",
+   "status": "breached"
+  },
+  {
+   "id": "proportionate_hold-A4",
+   "account_id": "A4",
+   "label": "Hold limited to the identifiable disputed amount (no duration stated in the cited report; applies from the moment of the hold)",
+   "start": "2026-09-16T12:00:00+05:30",
+   "due": "2026-09-16T12:00:00+05:30",
+   "rule": "MP High Court, Archana v State of MP, 27 Jul 2026; Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026",
+   "source": "https://www.livelaw.in/high-court/madhya-pradesh-high-court/freezing-bank-accounts-guidelines-cyberc",
+   "status": "met"
+  }
+ ],
+ "events": [
+  {
+   "t": 0.0,
+   "agent": "Intake",
+   "kind": "model",
+   "type": "start",
+   "text": "Reading the Section 106 BNSS notice (3 accounts) and the victim's complaint.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "model",
+   "type": "message",
+   "text": "Extracted 3 notice lines, 1 victim UTRs and a stated loss of ₹98,000.00.",
+   "refs": [],
+   "data": {
+    "notice_lines": [
+     {
+      "masked": "XXXX9834",
+      "amount_rupees": 98000.0,
+      "utr": "626152099011"
+     },
+     {
+      "masked": "XXXX8653",
+      "amount_rupees": 45000.0,
+      "utr": "626812396180"
+     },
+     {
+      "masked": "XXXX6876",
+      "amount_rupees": 980.0,
+      "utr": "626843483256"
+     }
+    ],
+    "victim_utrs": [
+     "626152099011"
+    ],
+    "amount_lost_rupees": 98000.0
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "T1 credited A2 (Vikas Kumar); the notice's ₹98,000.00 is within the ₹98,000.00 the ledgers show it received from traced accounts.",
+   "refs": [
+    "T1",
+    "A2"
+   ],
+   "data": {
+    "item": "A/c XXXX9834"
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "T2 credited A4 (Imran Shaikh); the notice's ₹45,000.00 is within the ₹45,000.00 the ledgers show it received from traced accounts.",
+   "refs": [
+    "T2",
+    "A4"
+   ],
+   "data": {
+    "item": "A/c XXXX8653"
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "T9 credited A3 (Narmada Wines & Spirits); the notice's ₹980.00 is within the ₹980.00 the ledgers show it received from traced accounts.",
+   "refs": [
+    "T9",
+    "A3"
+   ],
+   "data": {
+    "item": "A/c XXXX6876"
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "T1: ₹98,000.00 from the victim's account A1",
+   "refs": [
+    "T1",
+    "A1"
+   ],
+   "data": {
+    "item": "Victim UTR 626152099011"
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "Complaint states ₹98,000.00; the victim's ledger shows ₹98,000.00 leaving in 1 transfer.",
+   "refs": [
+    "T1"
+   ],
+   "data": {
+    "item": "Amount lost"
+   },
+   "ok": true
+  },
+  {
+   "t": 12.32,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "start",
+   "text": "Replaying 11 transactions across 3 banks in time order under FIFO, LIFO, PRO_RATA and LIBR.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "result",
+   "text": "A2 Vikas Kumar: balance ₹2,370.00; traceable ₹2,370.00 under LIBR (FIFO ₹2,370.00, LIFO ₹2,020.00, PRO_RATA ₹2,361.57).",
+   "refs": [
+    "A2",
+    "T1"
+   ],
+   "data": {
+    "by_rule": {
+     "FIFO": 237000,
+     "LIFO": 202000,
+     "PRO_RATA": 236157,
+     "LIBR": 237000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "result",
+   "text": "A3 Narmada Wines & Spirits: balance ₹2,51,00,000.00; traceable ₹980.00 under LIBR (FIFO ₹980.00, LIFO ₹980.00, PRO_RATA ₹965.36).",
+   "refs": [
+    "A3",
+    "T9"
+   ],
+   "data": {
+    "by_rule": {
+     "FIFO": 98000,
+     "LIFO": 98000,
+     "PRO_RATA": 96536,
+     "LIBR": 98000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "result",
+   "text": "A4 Imran Shaikh: balance ₹1,200.00; traceable ₹1,200.00 under LIBR (FIFO ₹1,190.67, LIFO ₹0.00, PRO_RATA ₹1,164.68).",
+   "refs": [
+    "A4",
+    "T2"
+   ],
+   "data": {
+    "by_rule": {
+     "FIFO": 119067,
+     "LIFO": 0,
+     "PRO_RATA": 116468,
+     "LIBR": 120000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "check",
+   "text": "Conservation under LIBR: held ₹4,550.00 + cashed out ₹58,450.00 + untraced ₹35,000.00 = lost ₹98,000.00.",
+   "refs": [],
+   "data": {
+    "lost": 9800000,
+    "held": 455000,
+    "cashed_out": 5845000,
+    "untraced": 3500000
+   },
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Pattern analyst",
+   "kind": "code",
+   "type": "tool",
+   "text": "A2: On the I4C suspect registry; Account opened 41 days ago; 98% of available funds passed straight through; Half of T1 moved on within 29 minutes.",
+   "refs": [
+    "A2",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T9",
+    "T1"
+   ],
+   "data": {
+    "signals": [
+     {
+      "id": "registry_hit",
+      "label": "On the I4C suspect registry",
+      "present": true,
+      "value": true,
+      "threshold": "listed",
+      "refs": [
+       "A2"
+      ]
+     },
+     {
+      "id": "linked_complaints",
+      "label": "2 linked NCRP complaints",
+      "present": false,
+      "value": 2,
+      "threshold": ">= 3",
+      "refs": [
+       "A2"
+      ]
+     },
+     {
+      "id": "new_account",
+      "label": "Account opened 41 days ago",
+      "present": true,
+      "value": 41,
+      "threshold": "< 180 days",
+      "refs": [
+       "A2"
+      ]
+     },
+     {
+      "id": "pass_through",
+      "label": "98% of available funds passed straight through",
+      "present": true,
+      "value": 0.976,
+      "threshold": ">= 90%",
+      "refs": [
+       "A2",
+       "T2",
+       "T3",
+       "T4",
+       "T5",
+       "T9"
+      ]
+     },
+     {
+      "id": "rapid_movement",
+      "label": "Half of T1 moved on within 29 minutes",
+      "present": true,
+      "value": 29,
+      "threshold": ">= 50% out within 30 min",
+      "refs": [
+       "T1",
+       "T2",
+       "T3",
+       "T4",
+       "T5"
+      ]
+     },
+     {
+      "id": "round_trip",
+      "label": "No round trips",
+      "present": false,
+      "value": false,
+      "threshold": "money sent to and received from the same account",
+      "refs": [
+       "A2"
+      ]
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 12.321,
+   "agent": "Pattern analyst",
+   "kind": "code",
+   "type": "tool",
+   "text": "A4: Account opened 120 days ago; 97% of available funds passed straight through.",
+   "refs": [
+    "A4",
+    "T6",
+    "T7",
+    "T8"
+   ],
+   "data": {
+    "signals": [
+     {
+      "id": "registry_hit",
+      "label": "On the I4C suspect registry",
+      "present": false,
+      "value": false,
+      "threshold": "listed",
+      "refs": [
+       "A4"
+      ]
+     },
+     {
+      "id": "linked_complaints",
+      "label": "0 linked NCRP complaints",
+      "present": false,
+      "value": 0,
+      "threshold": ">= 3",
+      "refs": [
+       "A4"
+      ]
+     },
+     {
+      "id": "new_account",
+      "label": "Account opened 120 days ago",
+      "present": true,
+      "value": 120,
+      "threshold": "< 180 days",
+      "refs": [
+       "A4"
+      ]
+     },
+     {
+      "id": "pass_through",
+      "label": "97% of available funds passed straight through",
+      "present": true,
+      "value": 0.974,
+      "threshold": ">= 90%",
+      "refs": [
+       "A4",
+       "T6",
+       "T7",
+       "T8"
+      ]
+     },
+     {
+      "id": "rapid_movement",
+      "label": "No large credit moved on within 30 minutes",
+      "present": false,
+      "value": false,
+      "threshold": ">= 50% out within 30 min",
+      "refs": [
+       "A4"
+      ]
+     },
+     {
+      "id": "round_trip",
+      "label": "No round trips",
+      "present": false,
+      "value": false,
+      "threshold": "money sent to and received from the same account",
+      "refs": [
+       "A4"
+      ]
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 18.731,
+   "agent": "Pattern analyst",
+   "kind": "model",
+   "type": "message",
+   "text": "A2: The presence of 'registry_hit' on the I4C suspect registry, combined with 'pass_through' (98% of available funds passed straight through) and 'rapid_movement' (Half of T1 moved on within 29 minutes), strongly suggests this account is a mule account.",
+   "refs": [
+    "A2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T9"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 18.731,
+   "agent": "Pattern analyst",
+   "kind": "model",
+   "type": "message",
+   "text": "A4: The 'pass_through' signal (97% of available funds passed straight through) indicates potential mule activity, although the account is not flagged by 'registry_hit'.",
+   "refs": [
+    "A4",
+    "T6",
+    "T7",
+    "T8"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 18.731,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "start",
+   "text": "Arguing the hold on 3 contested accounts.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 25.151,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A2: asks for lien of ₹2,370.00 (LIBR). A lien equal to the traceable amount under the LIBR rule (2,370.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T1 from A1. [overruled: citations and figures check out, but policy decides full_freeze of ₹2,370.00 under LIBR]",
+   "refs": [
+    "T1"
+   ],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A2",
+      "action": "lien",
+      "amount_rupees": 2370.0,
+      "rule": "LIBR",
+      "refs": [
+       "T1"
+      ],
+      "argument": "A lien equal to the traceable amount under the LIBR rule (2,370.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T1 from A1.",
+      "amount": 237000,
+      "status": "overruled",
+      "accepted": true,
+      "detail": "citations and figures check out, but policy decides full_freeze of ₹2,370.00 under LIBR"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 25.151,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A3: asks for lien of ₹980.00 (LIBR). A lien equal to the traceable amount under the LIBR rule (980.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T9 from A2. [accepted: citations and figures check out, and match the policy decision]",
+   "refs": [
+    "T9"
+   ],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A3",
+      "action": "lien",
+      "amount_rupees": 980.0,
+      "rule": "LIBR",
+      "refs": [
+       "T9"
+      ],
+      "argument": "A lien equal to the traceable amount under the LIBR rule (980.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T9 from A2.",
+      "amount": 98000,
+      "status": "accepted",
+      "accepted": true,
+      "detail": "citations and figures check out, and match the policy decision"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 25.151,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A4: asks for lien of ₹1,200.00 (LIBR). A lien equal to the traceable amount under the LIBR rule (1,200.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T2 from A2. [accepted: citations and figures check out, and match the policy decision]",
+   "refs": [
+    "T2"
+   ],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A4",
+      "action": "lien",
+      "amount_rupees": 1200.0,
+      "rule": "LIBR",
+      "refs": [
+       "T2"
+      ],
+      "argument": "A lien equal to the traceable amount under the LIBR rule (1,200.00) is requested to protect the victim's chance of getting money back, based on the tainted credit T2 from A2.",
+      "amount": 120000,
+      "status": "accepted",
+      "accepted": true,
+      "detail": "citations and figures check out, and match the policy decision"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 25.151,
+   "agent": "Account holder's advocate",
+   "kind": "model",
+   "type": "start",
+   "text": "Arguing the hold on 3 contested accounts.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Account holder's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A2: asks for lien of ₹2,020.00 (LIFO). The smallest traceable amount supported by a rule is 2,020.00 under LIFO, based on tainted credit T1 from A1. [overruled: citations and figures check out, but policy decides full_freeze of ₹2,370.00 under LIBR]",
+   "refs": [
+    "T1"
+   ],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A2",
+      "action": "lien",
+      "amount_rupees": 2020.0,
+      "rule": "LIFO",
+      "refs": [
+       "T1"
+      ],
+      "argument": "The smallest traceable amount supported by a rule is 2,020.00 under LIFO, based on tainted credit T1 from A1.",
+      "amount": 202000,
+      "status": "overruled",
+      "accepted": true,
+      "detail": "citations and figures check out, but policy decides full_freeze of ₹2,370.00 under LIBR"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Account holder's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A3: asks for lien of ₹965.36 (PRO_RATA). The smallest traceable amount supported by a rule is 965.36 under PRO_RATA, based on tainted credit T9 from A2. [overruled: citations and figures check out, but policy decides lien of ₹980.00 under LIBR]",
+   "refs": [
+    "T9"
+   ],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A3",
+      "action": "lien",
+      "amount_rupees": 965.36,
+      "rule": "PRO_RATA",
+      "refs": [
+       "T9"
+      ],
+      "argument": "The smallest traceable amount supported by a rule is 965.36 under PRO_RATA, based on tainted credit T9 from A2.",
+      "amount": 96536,
+      "status": "overruled",
+      "accepted": true,
+      "detail": "citations and figures check out, but policy decides lien of ₹980.00 under LIBR"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Account holder's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "A4: asks for lien of ₹0.00 (LIFO). The smallest traceable amount supported by a rule is 0.00 under LIFO, as per the facts provided for A4. [overruled: citations and figures check out, but policy decides lien of ₹1,200.00 under LIBR]",
+   "refs": [],
+   "data": {
+    "claims": [
+     {
+      "account_id": "A4",
+      "action": "lien",
+      "amount_rupees": 0.0,
+      "rule": "LIFO",
+      "refs": [],
+      "argument": "The smallest traceable amount supported by a rule is 0.00 under LIFO, as per the facts provided for A4.",
+      "amount": 0,
+      "status": "overruled",
+      "accepted": true,
+      "detail": "citations and figures check out, but policy decides lien of ₹1,200.00 under LIBR"
+     }
+    ]
+   },
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "A2: full freeze ₹2,370.00; current hold ₹2,370.00, released ₹0.00 (high confidence).",
+   "refs": [
+    "A2",
+    "T1",
+    "A1",
+    "T9",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+   ],
+   "data": {
+    "account_id": "A2",
+    "action": "full_freeze",
+    "amount": 237000,
+    "current_hold": 237000,
+    "released_by_change": 0,
+    "reasons": [
+     {
+      "text": "The victim's money arrived via T1 (₹98,000.00 of ₹98,000.00 from A1). The balance fell to ₹2,370.00 after T9, which caps what can still be traced: ₹2,370.00 under LIBR (lowest intermediate balance).",
+      "refs": [
+       "T1",
+       "A1",
+       "A2",
+       "T9"
+      ]
+     },
+     {
+      "text": "Full freeze justified by 4 mule signals: On the I4C suspect registry; Account opened 41 days ago; 98% of available funds passed straight through; Half of T1 moved on within 29 minutes. The amount traceable from this complaint alone is ₹2,370.00 under LIBR; the whole balance is held because of these signals, not this complaint's amount.",
+      "refs": [
+       "A2",
+       "T1",
+       "T2",
+       "T3",
+       "T4",
+       "T5",
+       "T9"
+      ]
+     },
+     {
+      "text": "Other tracing rules give FIFO ₹2,370.00, LIFO ₹2,020.00, PRO_RATA ₹2,361.57. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+      "refs": [
+       "A2"
+      ]
+     }
+    ],
+    "confidence": "high",
+    "range": {
+     "min": 202000,
+     "max": 237000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "A3: lien ₹980.00; current hold ₹2,51,00,000.00, released ₹2,50,99,020.00 (medium confidence).",
+   "refs": [
+    "A3",
+    "T9",
+    "A2"
+   ],
+   "data": {
+    "account_id": "A3",
+    "action": "lien",
+    "amount": 98000,
+    "current_hold": 2510000000,
+    "released_by_change": 2509902000,
+    "reasons": [
+     {
+      "text": "₹980.00 of the victim's money is identifiable here under LIBR: it arrived via T9 (₹980.00 of ₹980.00 from A2), and the balance never fell below it afterwards.",
+      "refs": [
+       "T9",
+       "A2",
+       "A3"
+      ]
+     },
+     {
+      "text": "The current hold of ₹2,51,00,000.00 covers the whole balance. MP High Court, Archana v State of MP, 27 Jul 2026 and Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026 limit a hold to the identifiable disputed amount, so ₹2,50,99,020.00 is released.",
+      "refs": [
+       "A3"
+      ]
+     },
+     {
+      "text": "Other tracing rules give FIFO ₹980.00, LIFO ₹980.00, PRO_RATA ₹965.36. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+      "refs": [
+       "A3"
+      ]
+     }
+    ],
+    "confidence": "medium",
+    "range": {
+     "min": 96536,
+     "max": 98000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 31.151,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "A4: lien ₹1,200.00; current hold ₹1,200.00, released ₹0.00 (low confidence).",
+   "refs": [
+    "A4",
+    "T2",
+    "A2",
+    "T8",
+    "T6",
+    "T7"
+   ],
+   "data": {
+    "account_id": "A4",
+    "action": "lien",
+    "amount": 120000,
+    "current_hold": 120000,
+    "released_by_change": 0,
+    "reasons": [
+     {
+      "text": "The victim's money arrived via T2 (₹44,650.00 of ₹45,000.00 from A2). The balance fell to ₹1,200.00 after T8, which caps what can still be traced: ₹1,200.00 under LIBR (lowest intermediate balance).",
+      "refs": [
+       "T2",
+       "A2",
+       "A4",
+       "T8"
+      ]
+     },
+     {
+      "text": "Mule signals present (Account opened 120 days ago; 97% of available funds passed straight through), but no registry hit and fewer than 3 linked complaints, so a full freeze is not justified.",
+      "refs": [
+       "A4",
+       "T6",
+       "T7",
+       "T8"
+      ]
+     },
+     {
+      "text": "Other tracing rules give FIFO ₹1,190.67, LIFO ₹0.00, PRO_RATA ₹1,164.68. LIBR is used because it is the accepted standard for mixed funds: it never counts the holder's later, clean credits as the victim's money.",
+      "refs": [
+       "A4"
+      ]
+     }
+    ],
+    "confidence": "low",
+    "range": {
+     "min": 0,
+     "max": 120000
+    }
+   },
+   "ok": true
+  },
+  {
+   "t": 31.152,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "result",
+   "text": "A3: IO decides on the grievance or the District Grievance Officer is auto-notified (15 days; source does not state the start, measured from receipt) — due 07 Oct 2026, breached. (MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1))",
+   "refs": [
+    "A3",
+    "io_decision-A3"
+   ],
+   "data": {},
+   "ok": false
+  },
+  {
+   "t": 31.152,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "result",
+   "text": "A3: Bank notifies the police 15 days before the 90-day hold period ends — due 06 Dec 2026, running. (MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1))",
+   "refs": [
+    "A3",
+    "lea_notice-A3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 31.152,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "result",
+   "text": "A3: No lawful direction within 90 days of the bank raising the grievance: bank may remove the hold after enhanced due diligence — due 21 Dec 2026, running. (MHA/I4C SOP 2 Jan 2026, grievance redressal (s. 9.1))",
+   "refs": [
+    "A3",
+    "hold_review-A3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 31.152,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "result",
+   "text": "A3: Hold limited to the identifiable disputed amount (no duration stated in the cited report; applies from the moment of the hold) — due 16 Sep 2026, breached. (MP High Court, Archana v State of MP, 27 Jul 2026; Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026)",
+   "refs": [
+    "A3",
+    "proportionate_hold-A3"
+   ],
+   "data": {},
+   "ok": false
+  },
+  {
+   "t": 37.872,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "L1 full freeze justification to Branch Manager, Sahyadri Bank: 5 figures checked.",
+   "refs": [
+    "A2",
+    "L1"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 44.252,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "L2 lien instruction to Branch Manager, Sahyadri Bank: 6 figures checked.",
+   "refs": [
+    "A3",
+    "L2"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 51.822,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "L3 grievance reply to Narmada Wines & Spirits: 7 figures checked.",
+   "refs": [
+    "A3",
+    "L3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.612,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "L4 lien instruction to Branch Manager, Konark Small Finance Bank: 8 figures checked.",
+   "refs": [
+    "A4",
+    "L4"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.612,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "start",
+   "text": "Replaying the ledgers independently and re-checking every figure.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "ledger_replay: 11 transactions replayed; no overdrafts; every balance matches",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "policy_rule_replay: LIBR recomputed in closed form for 3 accounts and 11 hops",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "taint_bounds: 0 <= tainted <= balance at every point, under every rule",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "flow_balance: for every account and rule, tainted in - tainted out = held",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "conservation: held 455000 + cashed out 5845000 + untraced 3500000 = lost 9800000 paise",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "decisions: 3 decisions: liens equal replayed LIBR, none exceeds its balance",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "letters: 26 figures in 4 letters match the decisions",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "citations: 101 citations in events and reasons all resolve to the case",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "clocks: 7 clocks consistent with their dates and holds",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "result",
+   "text": "All checks passed.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 59.617,
+   "agent": "Nodal officer",
+   "kind": "human",
+   "type": "approval",
+   "text": "Awaiting approval of 3 decisions (₹2,50,99,020.00 to be released).",
+   "refs": [
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "data": {},
+   "ok": true
+  }
+ ],
+ "letters": [
+  {
+   "id": "L1",
+   "account_id": "A2",
+   "kind": "full_freeze_justification",
+   "to": "Branch Manager, Sahyadri Bank",
+   "subject": "Justification for Full Balance Freeze on Account XXXX9834 following Cyber-Fraud Complaint",
+   "body": "This letter serves to justify the decision to maintain a full freeze on the balance of Account XXXX9834, held by Vikas Kumar, Sahyadri Bank. This action is taken in response to the NCRP acknowledgement 31509260012345 and the notice under Section 106 BNSS dated 16 Sep 2026 from SI R. Verma, Cyber PS, Bhopal.\n\nThe current hold is set at ₹2,370.00, which represents the entire balance. The decision to keep this full freeze is based on significant mule signals, including the account being opened only 41 days ago, 98% of available funds passing straight through, and half of T1 moving within 29 minutes. Furthermore, the account is flagged on the I4C suspect registry.\n\nWhile a hold is typically limited to the identifiable disputed amount, as per MP High Court, Archana v State of MP, 27 Jul 2026, and Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026, the traceable amount to this complaint alone under LIBR is ₹2,370.00. Given the high risk indicators, the full freeze of ₹2,370.00 is necessary for investigation.\n\nNodal Officer, Sahyadri Bank",
+   "verified": true,
+   "numbers_checked": 5
+  },
+  {
+   "id": "L2",
+   "account_id": "A3",
+   "kind": "lien_instruction",
+   "to": "Branch Manager, Sahyadri Bank",
+   "subject": "Instruction to Replace Whole-Account Freeze with Lien on Account XXXX6876",
+   "body": "This letter serves as a formal instruction regarding the hold placed on Account XXXX6876, held by Narmada Wines & Spirits, Sahyadri Bank.\n\nWe acknowledge the current hold amount of ₹2,51,00,000.00, which covers the whole balance, pursuant to NCRP acknowledgement 31509260012345 and the notice under Section 106 BNSS dated 16 Sep 2026 from SI R. Verma, Cyber PS, Bhopal.\n\nBased on the legal precedents set by MP High Court, Archana v State of MP, 27 Jul 2026, and Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026, a hold must be limited to the identifiable disputed amount. Therefore, we instruct you to replace the whole-account freeze with a lien of only ₹980.00, which is traceable to the complaint under LIBR, corresponding to the credit received via UTR 626843483256.\n\nPlease release the remaining amount of ₹2,50,99,020.00 from the hold immediately.\n\nNodal Officer, Sahyadri Bank",
+   "verified": true,
+   "numbers_checked": 6
+  },
+  {
+   "id": "L3",
+   "account_id": "A3",
+   "kind": "grievance_reply",
+   "to": "Narmada Wines & Spirits",
+   "subject": "Reply to Grievance Regarding Hold on Account XXXX6876",
+   "body": "This is in reference to the grievance received on 22 Sep 2026 concerning the hold placed on your account, XXXX6876, held with Sahyadri Bank.\n\nWe acknowledge the NCRP acknowledgement 31509260012345 and the notice under Section 106 BNSS dated 16 Sep 2026 from SI R. Verma, Cyber PS, Bhopal. The current hold amount is ₹2,51,00,000.00.\n\nBased on the legal precedents set by the MP High Court, Archana v State of MP, 27 Jul 2026, and the Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026, the hold is limited to the identifiable disputed amount. We have determined that a lien of ₹980.00 is applicable, as this amount is traceable under the lowest intermediate balance rule, corresponding to the credit via UTR 626843483256.\n\nConsequently, we are releasing ₹2,50,99,020.00 from the hold. The remaining lien of ₹980.00 will remain in place.\n\nNodal Officer, Sahyadri Bank",
+   "verified": true,
+   "numbers_checked": 7
+  },
+  {
+   "id": "L4",
+   "account_id": "A4",
+   "kind": "lien_instruction",
+   "to": "Branch Manager, Konark Small Finance Bank",
+   "subject": "Instruction to Replace Whole-Account Freeze with Lien on Account XXXX8653",
+   "body": "This letter serves as a formal instruction regarding the hold placed on account XXXX8653, held by Imran Shaikh.\n\nThis action follows the NCRP acknowledgement 31509260012345 and the notice under Section 106 BNSS dated 16 Sep 2026 from SI R. Verma, Cyber PS, Bhopal. The current hold is for ₹1,200.00 (the whole balance).\n\nBased on the legal precedents set by MP High Court, Archana v State of MP, 27 Jul 2026, and Rajasthan High Court, Shree Balaji Enterprises v RBI, 20 Aug 2026, a hold must be limited to the identifiable disputed amount. The decision is to impose a lien of ₹1,200.00, which is the amount traceable under the lowest intermediate balance rule. Consequently, ₹0.00 is to be released from the hold.\n\nPlease ensure this instruction is implemented immediately. The credit received via UTR 626812396180 (₹45,000.00, of which ₹44,650.00 is traceable to the complaint under LIBR) is noted in this context.\n\nNodal Officer, Konark Small Finance Bank",
+   "verified": true,
+   "numbers_checked": 8
+  }
+ ],
+ "verification": {
+  "passed": true,
+  "checks": [
+   {
+    "name": "ledger_replay",
+    "ok": true,
+    "detail": "11 transactions replayed; no overdrafts; every balance matches"
+   },
+   {
+    "name": "policy_rule_replay",
+    "ok": true,
+    "detail": "LIBR recomputed in closed form for 3 accounts and 11 hops"
+   },
+   {
+    "name": "taint_bounds",
+    "ok": true,
+    "detail": "0 <= tainted <= balance at every point, under every rule"
+   },
+   {
+    "name": "flow_balance",
+    "ok": true,
+    "detail": "for every account and rule, tainted in - tainted out = held"
+   },
+   {
+    "name": "conservation",
+    "ok": true,
+    "detail": "held 455000 + cashed out 5845000 + untraced 3500000 = lost 9800000 paise"
+   },
+   {
+    "name": "decisions",
+    "ok": true,
+    "detail": "3 decisions: liens equal replayed LIBR, none exceeds its balance"
+   },
+   {
+    "name": "letters",
+    "ok": true,
+    "detail": "26 figures in 4 letters match the decisions"
+   },
+   {
+    "name": "citations",
+    "ok": true,
+    "detail": "101 citations in events and reasons all resolve to the case"
+   },
+   {
+    "name": "clocks",
+    "ok": true,
+    "detail": "7 clocks consistent with their dates and holds"
+   }
+  ]
+ }
+}

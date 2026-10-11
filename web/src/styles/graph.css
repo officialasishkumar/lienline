@@ -1,0 +1,431 @@
+.graph-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  touch-action: none;
+  user-select: none;
+}
+.graph-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+.graph-svg:active {
+  cursor: grabbing;
+}
+.dotgrid {
+  fill: var(--line);
+}
+.col-head {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  fill: var(--ink-3);
+}
+
+/* Bank groups */
+.bank-group rect {
+  fill: color-mix(in srgb, var(--bank) 7%, transparent);
+  stroke: color-mix(in srgb, var(--bank) 32%, transparent);
+  stroke-width: 1;
+}
+.bank-group text {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  fill: var(--bank);
+}
+
+/* Edges */
+.gedge path {
+  fill: none;
+  stroke-linecap: round;
+}
+.gedge-ghost {
+  stroke: var(--line-2);
+  stroke-width: 1;
+  stroke-dasharray: 2 5;
+  opacity: 0.7;
+}
+.gedge-hit {
+  stroke: transparent;
+  stroke-width: 16;
+  pointer-events: stroke;
+}
+.gedge-flow {
+  stroke: var(--flow-soft);
+  transition: stroke-width 0.6s var(--ease), opacity 0.3s;
+  pointer-events: none;
+}
+.gedge.cash .gedge-flow {
+  stroke: var(--flow);
+  opacity: 0.45;
+}
+.gedge-taint {
+  stroke: var(--taint);
+  transition: stroke-width 0.6s var(--ease), opacity 0.3s;
+  pointer-events: none;
+}
+.gedge.dim {
+  opacity: 0.18;
+}
+.gedge.hl .gedge-taint {
+  filter: drop-shadow(0 0 5px var(--taint-line));
+}
+.gedge.hl .gedge-flow {
+  stroke: color-mix(in srgb, var(--ink) 30%, transparent);
+}
+.gedge-head circle {
+  fill: var(--ink-2);
+}
+.gedge-head.taint circle {
+  fill: var(--taint);
+  filter: drop-shadow(0 0 6px var(--taint));
+}
+.gedge-particle {
+  fill: #fff;
+  stroke: var(--taint);
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+.gedge-label rect {
+  fill: var(--surface-2);
+  stroke: var(--line-2);
+}
+.gedge-label text {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  fill: var(--ink);
+}
+.gedge-label .l-id {
+  fill: var(--ink-3);
+}
+.gedge-label .l-taint {
+  fill: var(--taint);
+  font-weight: 600;
+}
+.gedge-label {
+  pointer-events: none;
+}
+
+/* Nodes */
+.gnode {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  outline: none;
+}
+.gnode-card {
+  fill: var(--surface-2);
+  stroke: var(--line-2);
+  stroke-width: 1;
+  transition: stroke 0.3s, fill 0.3s;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+}
+.gnode-stripe {
+  fill: var(--bank);
+}
+.gnode-role {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  fill: var(--ink-3);
+}
+.gnode-title {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+.gnode-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--ink-3);
+}
+.gnode.hot .gnode-card {
+  stroke: var(--taint-line);
+  fill: color-mix(in srgb, var(--taint) 4%, var(--surface-2));
+}
+.gnode.victim .gnode-card {
+  fill: var(--ink);
+  stroke: var(--ink);
+}
+.gnode.victim .gnode-title {
+  fill: var(--paper);
+}
+.gnode.victim .gnode-sub,
+.gnode.victim .gnode-role {
+  fill: color-mix(in srgb, var(--paper) 65%, transparent);
+}
+.gnode.cash .gnode-card {
+  stroke-dasharray: 4 3;
+  fill: var(--paper-2);
+}
+.gnode.source .gnode-card {
+  stroke-dasharray: 2 3;
+}
+.gnode:hover .gnode-card,
+.gnode:focus-visible .gnode-card {
+  stroke: var(--ink-2);
+}
+.gnode:focus-visible .gnode-card {
+  stroke: var(--code);
+  stroke-width: 2.5;
+}
+.gnode.selected .gnode-card {
+  stroke: var(--ink);
+  stroke-width: 2.2;
+}
+.gnode.dim {
+  opacity: 0.32;
+}
+.gnode-ring {
+  fill: none;
+  stroke: var(--taint);
+  stroke-width: 2;
+  opacity: 0.85;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ring 1.4s var(--ease) infinite;
+}
+@keyframes ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+.gnode-taint rect {
+  fill: var(--taint);
+}
+.gnode-taint circle {
+  fill: #fff;
+  animation: blink2 1.2s infinite;
+}
+@keyframes blink2 {
+  50% {
+    opacity: 0.3;
+  }
+}
+.gnode-taint text {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  fill: #fff;
+}
+.gnode-decision rect {
+  stroke-width: 1;
+}
+.gnode-decision text {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.gnode-decision.d-lien rect {
+  fill: var(--surface-2);
+  stroke: var(--taint);
+}
+.gnode-decision.d-lien text {
+  fill: var(--taint-ink);
+}
+.gnode-decision.d-full_freeze rect {
+  fill: var(--taint);
+  stroke: var(--taint);
+}
+.gnode-decision.d-full_freeze text {
+  fill: #fff;
+}
+.gnode-decision.d-release rect {
+  fill: var(--human-soft);
+  stroke: var(--human);
+}
+.gnode-decision.d-release text {
+  fill: var(--human);
+}
+.gnode-decision {
+  animation: pop 0.45s var(--ease) both;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+/* HUD */
+.graph-hud {
+  position: absolute;
+  left: 14px;
+  right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+.graph-hud.top {
+  top: 12px;
+}
+.hud-clock,
+.hud-txn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-2) 88%, transparent);
+  border: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--ink-2);
+  backdrop-filter: blur(6px);
+}
+.hud-txn {
+  color: var(--ink);
+}
+.rec {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+.rec.on {
+  background: var(--taint);
+  animation: blink2 1s infinite;
+}
+.graph-zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+}
+.graph-zoom .icon-btn {
+  width: 30px;
+  height: 30px;
+  background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+}
+.graph-legend {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+.graph-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.graph-legend i {
+  display: inline-block;
+  width: 22px;
+  border-radius: 3px;
+}
+.lg-taint {
+  height: 4px;
+  background: var(--taint);
+}
+.lg-flow {
+  height: 6px;
+  background: var(--flow-soft);
+}
+.lg-width {
+  height: 10px;
+  background: linear-gradient(90deg, var(--flow-soft) 0 100%);
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%);
+}
+.graph-legend .lg-hint-touch {
+  display: none;
+}
+.lg-hint,
+.lg-hint-touch {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+}
+
+/* Edge tooltip */
+.edge-tip {
+  position: absolute;
+  z-index: 5;
+  transform: translate(14px, 14px);
+  width: 250px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  box-shadow: var(--shadow-lg);
+  pointer-events: none;
+  font-size: 12.5px;
+}
+.tip-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.tip-amt {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.tip-route {
+  color: var(--ink-2);
+}
+.tip-meta {
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+.tip-note {
+  margin-top: 6px;
+  font-style: italic;
+  color: var(--ink-2);
+}
+.tip-rules {
+  margin-top: 8px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+.tip-rules th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--ink-3);
+  padding: 2px 0;
+}
+.tip-rules td {
+  text-align: right;
+}
+.tip-rules tr.on th,
+.tip-rules tr.on td {
+  color: var(--taint-ink);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .graph-legend .lg-hint {
+    display: none;
+  }
+  .graph-legend .lg-hint-touch {
+    display: inline-flex;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+  }
+  .graph-hud {
+    right: 110px;
+  }
+}

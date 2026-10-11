@@ -1,0 +1,215 @@
+{
+  "market": [
+    {
+      "fact": "Complaints on NCRP 2021-2025 (cumulative), total amount reported lost, amount already marked as LIEN, and FIRs. Derived by us: lien/reported = 14.9%; FIRs/complaints = 2.97%.",
+      "number": "65,89,201 complaints; Rs 55,050 crore reported; Rs 8,189 crore marked as lien; 1,95,760 FIRs",
+      "source": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU251_hTDkTd.pdf (Lok Sabha Unstarred Q 251, MHA, opened and read via pdftotext)",
+      "date": "21 Jul 2026 (data 2021-2025)"
+    },
+    {
+      "fact": "CFCFRMS cumulative 'saved' amount and complaints since 2021 launch",
+      "number": "> Rs 11,158 crore saved across > 32.80 lakh complaints (till 30.06.2026)",
+      "source": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU251_hTDkTd.pdf",
+      "date": "21 Jul 2026"
+    },
+    {
+      "fact": "Earlier CFCFRMS cumulative figure (shows growth rate)",
+      "number": "> Rs 8,189 crore across > 23.61 lakh complaints (till 31.12.2025)",
+      "source": "https://www.mha.gov.in/MHA1/Par2017/pdfs/par2026-pdfs/RS11022026/1349.pdf (Rajya Sabha Unstarred Q 1349, opened and read)",
+      "date": "11 Feb 2026"
+    },
+    {
+      "fact": "Money actually restored to victims through the NCRP restoration module vs 'saved'. Derived: Rs 18.05 cr is about 0.16% of Rs 11,158 cr; avg about Rs 4,974 per case.",
+      "number": "36,290 restoration cases; Rs 18.05 crore (all 36 States/UTs)",
+      "source": "https://www.verdictum.in/supreme-court/digital-arrest-scams-interim-directions-rbi-1619172 (SC 4th status report noted in 4 Aug 2026 order; opened by earlier research pass)",
+      "date": "3-4 Aug 2026"
+    },
+    {
+      "fact": "Banks/branches on the MHA grievance and restoration portals (best available proxy for CFCFRMS bank onboarding; an explicit 'banks onboarded to CFCFRMS' figure was not found)",
+      "number": "Grievance portal: 1,23,590 branches of 69 banks; Restoration portal: 57 banks",
+      "source": "https://www.verdictum.in/supreme-court/digital-arrest-scams-interim-directions-rbi-1619172",
+      "date": "Aug 2026"
+    },
+    {
+      "fact": "Cyber crime cases registered (NCRB 'Crime in India'), 2020 to 2024; fraud+cheating under IPC/BNS grew from 14,875 to 49,054",
+      "number": "50,035 (2020), 52,974 (2021), 65,893 (2022), 86,420 (2023), 1,01,928 (2024)",
+      "source": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU251_hTDkTd.pdf (Annexure I, NCRB)",
+      "date": "21 Jul 2026"
+    },
+    {
+      "fact": "Cybercrime cases reported in 2025 vs FIRs; losses (existing research, not re-opened)",
+      "number": "2.81 million cases in 2025 (2.26 million in 2024); 55,484 FIRs; losses Rs 22,495 crore (2025); 1930 helpline 32.4 million calls",
+      "source": "https://www.moneylife.in/article/fraud-alert-india-is-losing-over-22000-crore-a-year-in-cyber-scams-and-the-worst-is-yet-to-come/80612.html",
+      "date": "30 May 2026"
+    },
+    {
+      "fact": "Banks in India by category (SECONDARY source: Wikipedia 'List of banks in India'; page has internal inconsistencies; RBI primary count not retrievable). Use as approximate and say 'approx., per public listings'.",
+      "number": "Scheduled commercial banks 124 (1 Aug 2025); public 12, private 21, foreign 44, small finance 11, payments 5, RRBs 28, local area 2 (page dated 1 Oct 2026); state co-op 34, district central co-op 352, scheduled UCBs 24, non-scheduled UCBs 1,407 (1 Aug 2025)",
+      "source": "https://en.wikipedia.org/wiki/List_of_banks_in_India",
+      "date": "as listed, Aug 2025 - Oct 2026"
+    },
+    {
+      "fact": "Whole-account freeze versus tiny disputed sum, court-recorded examples (existing research)",
+      "number": "Rs 2.51 crore frozen over Rs 980 (MP HC, Archana, 27 Jul 2026); Rs 8.26 lakh over Rs 1,000 UPI payment (AP HC, Sri Sai Wines, 22 Jun 2026); Rs 93.50 crore balance over Rs 200 credit (Delhi HC, Neelkanth, Feb 2025); Rs 1,100 lien-only order (Gujarat HC, 9 Jun 2026)",
+      "source": "https://www.livelaw.in/high-court/madhya-pradesh-high-court/freezing-bank-accounts-guidelines-cybercrime-complaints-grievance-redressal-543201 ; https://www.medianama.com/2026/07/223-merchants-bank-accounts-frozen-upi-payments-fraudsters-andhra-hc/ ; https://www.medianama.com/2025/03/223-cybercrime-impact-on-bank-accounts-delhi-hc-urges-mha-to-address-blanket-bank-account-freezes/ ; https://www.livelaw.in/high-court/gujarat-high-court/gujarat-high-court-bank-account-freeze-holder-involvement-criminal-activity-fundamental-rights-537262",
+      "date": "2025-2026"
+    },
+    {
+      "fact": "Litigation volume: Rajasthan HC disposed 105 petitions together with 14 guidelines; at least 10 High Courts have ruled on freezes 2024-2026. No national aggregate of petitions or of accounts frozen exists (MediaNama says MHA did not answer).",
+      "number": "105 petitions in one batch (20 Aug 2026)",
+      "source": "https://www.livelaw.in/high-court/rajasthan-high-court/rajasthan-high-court-account-freeze-cyber-crime-546999 ; https://www.medianama.com/2026/09/223-cybercrime-money-mp-hc-three-month/",
+      "date": "Aug-Sep 2026"
+    },
+    {
+      "fact": "One Rs 4.43 crore scam led the MHA automated tracing flow to freeze 36,000+ accounts including small merchants (Faridabad)",
+      "number": "36,000+ accounts / Rs 4.43 crore",
+      "source": "https://the420.in/faridabad-cyber-scam-upi-fraud-accounts-frozen-home-ministry/",
+      "date": "Dec 2025"
+    },
+    {
+      "fact": "Parliamentary Standing Committee: 2022 cyber-fraud loss vs returned to victims (existing research)",
+      "number": "Rs 2,294.79 crore lost; Rs 0.57 crore returned",
+      "source": "https://www.medianama.com/2026/07/223-merchants-bank-accounts-frozen-upi-payments-fraudsters-andhra-hc/",
+      "date": "2024 report"
+    },
+    {
+      "fact": "I4C scheme approved with outlay (Wikipedia, API extract)",
+      "number": "Rs 415.86 crore (approved Oct 2018)",
+      "source": "https://en.wikipedia.org/wiki/Indian_Cyber_Crime_Coordination_Centre",
+      "date": "Oct 2018"
+    },
+    {
+      "fact": "Police capacity: CyTrain MOOC registrations; Joint Cyber Coordination Teams",
+      "number": "1,63,344 police/judicial officers registered on CyTrain (till 30.06.2026); 7 JCCTs (Mewat, Jamtara, Ahmedabad, Hyderabad, Chandigarh, Visakhapatnam, Guwahati)",
+      "source": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU251_hTDkTd.pdf",
+      "date": "Jul 2026"
+    }
+  ],
+  "benchmarks": [
+    {
+      "country": "United Kingdom",
+      "system": "PSR mandatory APP-fraud reimbursement (in force 7 Oct 2024) via Faster Payments and CHAPS",
+      "what_it_does": "Sending and receiving PSPs split reimbursement of authorised-push-payment scam losses (cap GBP 85,000, GBP 100 excess). It moves the loss onto banks, which creates the incentive to stop mule accounts; it does not itself prescribe how a receiving bank holds funds.",
+      "numbers": "88% of money lost reimbursed over 18 months (7 Oct 2024-31 Mar 2026); GBP 316m reimbursed over 18 months; GBP 72.6m in Q1 2026; about 438,300 claims reported, 301,500 in scope; 82% closed within 5 business days; PSR estimates GBP 73m a year lower APP losses and about 35,000 fewer scams",
+      "gap": "Victim-side compensation and sender-side friction. Nothing computes a proportionate, per-account hold on the receiving (mule) side from a traced money trail; an innocent recipient's account is not addressed.",
+      "source": "https://www.psr.org.uk/information-for-consumers/app-scams-reimbursement-dashboard/ (updated 30 Jul 2026, opened) ; https://www.psr.org.uk/news-and-updates/latest-news/news/payment-fraud-falls-by-73m-following-psr-reimbursement-scheme/ (1 Jul 2026, opened)"
+    },
+    {
+      "country": "Singapore",
+      "system": "Protection from Scams Act (in force 1 Jul 2025) restriction orders; Anti-Scam Centre; proposed account disabling orders (Bill announced 4 Aug 2026)",
+      "what_it_does": "Police can order banks to restrict a likely scam VICTIM's account, ATM and credit use for up to 30 days, with up to 5 extensions; funds stay usable for daily expenses at police discretion. A proposed Bill adds disclosure orders and orders to disable accounts matching scam-related indicators (up to 30 days, extendable once by up to 30 days; appeal to Commissioner of Police). A facility-restriction framework for mules (from Oct 2025) can run up to 3 years.",
+      "numbers": "H1 2026: 16,821 scam cases, S$410.6m lost, S$97m+ recovered by Anti-Scam Centre, 18 restriction orders issued; 2025: scam cases down 27.6%, more than 7,000 mules and suspects investigated; 2024 record losses S$1.1bn, 50,000+ cases",
+      "gap": "Orders are person- or indicator-level (restrict the individual or disable the account for up to 30 days). Neither computes an amount-proportionate lien from a traced trail, and a disabled account is not partially held.",
+      "source": "https://www.bbc.com/news/articles/c2k1148dwdwo (1 Jul 2025, opened by curl) ; https://www.channelnewsasia.com/singapore/scams-banks-telcos-disclose-info-disable-accounts-ocha-fines-6294631 (4 Aug 2026, opened by curl) ; https://www.straitstimes.com/singapore/courts-crime/over-410m-lost-to-scams-in-first-half-of-2026-8-in-10-victims-voluntarily-handed-money-to-scammers (26 Aug 2026, opened by curl)"
+    },
+    {
+      "country": "Australia",
+      "system": "Scam-Safe Accord (banks), Fraud Reporting Exchange (FRX) run by AFCX, National Anti-Scam Centre, Scams Prevention Framework",
+      "what_it_does": "FRX lets member banks report scam-receiving accounts to each other quickly; Accord commits banks to confirmation of payee, warnings, payment delays and limits on high-risk channels; the Scams Prevention Framework gives banks, telcos and platforms mandatory anti-scam obligations (from 1 Jul 2026 per Australian Broker).",
+      "numbers": "A$100m industry confirmation-of-payee system; all ABA and COBA members joined AFCX/FRX by Jul 2024 (page gives no member count); A$2.18bn total scam losses in 2025 (investment A$837.7m, up 7.8%); A$248.3m lost in Q1 2026 across 60,657 reports",
+      "gap": "Information exchange and friction. No hold-duration rule or amount-proportionate hold is specified; the receiving bank decides how much to freeze. FRX volume and funds-frozen figures were not published on the pages opened.",
+      "source": "https://www.ausbanking.org.au/scam-safe-accord/ (opened) ; https://www.afcx.com.au/ (opened) ; https://www.brokernews.com.au/news/breaking-news/scam-losses-hit-248m-in-q1-as-asic-targets-imposter-websites-289528.aspx (17 Jun 2026, opened by curl)"
+    },
+    {
+      "country": "United States",
+      "system": "FinCEN Section 314(b) voluntary information sharing; Zelle (Early Warning Services) scam claims",
+      "what_it_does": "314(b) gives banks a safe harbor to share information with each other on suspected money laundering and (per FinCEN's 12 Jun 2026 fact sheet issue) fraud and other specified unlawful activity. There is no national freeze/lien procedure for scam proceeds; holds are each bank's own policy.",
+      "numbers": "Fact sheet reissued 12 Jun 2026 (FinCEN page does not give participant counts). Senator Warren report: Zelle-owning banks reimbursed 47% of dollars customers reported as unauthorized in 2021 and H1 2022 (Bank of America about 45%, $56.1m of $125m; PNC 14% of cases); industry reply: 99.9% of 5bn Zelle transactions had no reported fraud or scam",
+      "gap": "Voluntary, bilateral sharing and no tracing-to-hold computation; recipients' accounts are held (or not) at bank discretion with no proportionality standard.",
+      "source": "https://www.fincen.gov/section-314b (opened) ; https://www.bankingdive.com/news/warren-zelle-fraud-scams-report-truist-pnc-us-bank-america-jpmorgan-wells-fargo-aba-bpi-cba/633305/ (4 Oct 2022, opened by curl)"
+    },
+    {
+      "country": "European Union",
+      "system": "Instant Payments Regulation Verification of Payee (VoP); PSR/PSD3 package (provisional deal 27 Nov 2025)",
+      "what_it_does": "VoP makes euro-area PSPs confirm payee name and account number before a SEPA credit transfer (mandatory since Oct 2025; non-euro PSPs by Jul 2027). It stops misdirected/impersonation payments before they are made.",
+      "numbers": "VoP mandatory euro-area from Oct 2025, non-euro area Jul 2027 (LSEG); LSEG cites projected global APP fraud losses of US$331bn by 2027",
+      "gap": "Pre-payment check only. It does not handle funds that have already landed in a mule account, and there is no tracing or proportionate hold. PSR/PSD3 details not verified in this pass (headline-only).",
+      "source": "https://www.lseg.com/en/insights/risk-intelligence/verification-of-payee-becomes-mandatory-new-regulatory-rules-in-eu-payments (30 Oct 2025, opened by curl)"
+    }
+  ],
+  "pricing": [
+    {
+      "item": "Gemini 3.1 Flash-Lite (paid, standard)",
+      "price": "$0.25 input / $1.50 output",
+      "unit": "per 1M tokens (batch $0.125 / $0.75)",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing (opened)",
+      "date": "11 Oct 2026; stated valid through 31 Dec 2026"
+    },
+    {
+      "item": "Gemini 3 Flash (preview) (paid, standard)",
+      "price": "$0.50 input / $3.00 output",
+      "unit": "per 1M tokens (batch $0.25 / $1.50)",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "date": "11 Oct 2026"
+    },
+    {
+      "item": "Gemini 3.6 Flash and 3.8 Flash (paid, standard)",
+      "price": "$0.75 input / $3.75 output (page says rises from 1 Jan 2027, e.g. 3.8 Flash $1.50 / $7.50)",
+      "unit": "per 1M tokens (batch $0.375 / $1.875)",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "date": "11 Oct 2026"
+    },
+    {
+      "item": "Gemini 2.5 Flash / 2.5 Flash-Lite (paid, standard)",
+      "price": "2.5 Flash $0.30 / $2.50; 2.5 Flash-Lite $0.10 / $0.40",
+      "unit": "per 1M tokens input / output",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "date": "11 Oct 2026"
+    },
+    {
+      "item": "Llama 3.3 70B Instruct, spread across 11 hosted providers (Nebius is NOT in this list; Nebius price not retrievable)",
+      "price": "Lowest DeepInfra $0.10 in / $0.32 out; Groq $0.59 / $0.79; Together $1.04 / $1.04",
+      "unit": "per 1M tokens input / output",
+      "source": "https://openrouter.ai/api/v1/models/meta-llama/llama-3.3-70b-instruct/endpoints (OpenRouter public API)",
+      "date": "11 Oct 2026"
+    },
+    {
+      "item": "AWS EC2 m6i.xlarge (4 vCPU, 16 GiB), Linux on-demand, Asia Pacific (Mumbai) ap-south-1",
+      "price": "$0.202 per hour (about $147 per 730-hour month, derived); m7i.xlarge $0.2121/h",
+      "unit": "per instance-hour",
+      "source": "AWS Price List bulk file, https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-sec-sel/Asia%20Pacific%20(Mumbai)/Linux/index.json (publication date 2026-10-09)",
+      "date": "9 Oct 2026"
+    },
+    {
+      "item": "Azure VM Standard_D4s_v5 (4 vCPU, 16 GiB), Linux, Central India",
+      "price": "$0.202 per hour (Spot $0.03733; low-priority $0.0404)",
+      "unit": "per hour",
+      "source": "Azure Retail Prices API https://prices.azure.com/api/retail/prices (filter centralindia, Standard_D4s_v5)",
+      "date": "11 Oct 2026 (list price effective 1 Nov 2021)"
+    },
+    {
+      "item": "Azure Database for PostgreSQL Flexible Server, General Purpose Ddsv5, 4 vCore compute, Central India (compute only, storage extra). Interpretation: retailPrice is per whole SKU-hour because the 64 vCore SKU is exactly 16x ($8.032).",
+      "price": "$0.502 per hour (about $366 per 730-hour month, derived)",
+      "unit": "per hour, 4 vCore SKU",
+      "source": "Azure Retail Prices API (serviceName 'Azure Database for PostgreSQL', centralindia)",
+      "date": "11 Oct 2026 (effective 1 Mar 2023)"
+    }
+  ],
+  "gtm": [
+    {
+      "fact": "A Cyber Fraud Mitigation Centre (CFMC) at I4C seats representatives of major banks, financial intermediaries, payment aggregators, telecom providers, IT intermediaries and state/UT law enforcement together for real-time action; this is the existing integration point LienLine would sit beside.",
+      "source": "https://www.mha.gov.in/MHA1/Par2017/pdfs/par2026-pdfs/RS11022026/1349.pdf"
+    },
+    {
+      "fact": "MHA SOP for NCRP-CFCFRMS (complaint processing, bank coordination, grievance redressal, removal of lien markings, restoration) is in force; Money Restoration and Grievance Redressal modules functional from April 2026. LienLine automates the lien-sizing and clock-keeping the SOP presumes.",
+      "source": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU251_hTDkTd.pdf"
+    },
+    {
+      "fact": "MuleHunter.AI (RBI Innovation Hub) is deployed across 31 banks for mule detection (detection only, upstream of LienLine); RBIH advertises 85%+ accuracy. Headline: RBIH nudging banks to adopt it (ET BFSI, 19 May 2026, link not opened).",
+      "source": "https://rmaindia.org/mulehunter-ai-rbis-ai-fraud-detection-system-now-live-across-31-banks/ ; https://rbihub.in/projects/mulehunter"
+    },
+    {
+      "fact": "Supreme Court (4 Aug 2026) directed RBI to adopt a debit-hold SOP within 4 weeks and states to operationalise the grievance/restoration modules; RBI issued draft KYC Amendment Directions on 11 Sep 2026 (bank-placed temporary debit hold, 60-day cap, central MIS of holds). This creates a compliance deadline-driven demand window for banks.",
+      "source": "https://www.verdictum.in/supreme-court/digital-arrest-scams-interim-directions-rbi-1619172 ; https://disputeresolution.cyrilamarchandblogs.com/2026/09/towards-certainty-rbis-draft-directions-on-debit-freeze/"
+    },
+    {
+      "fact": "MP HC (Archana, 27 Jul 2026) and Rajasthan HC (Shree Balaji Enterprises, 20 Aug 2026) issue statewide freeze guidelines; Rajasthan HC orders a DGP circular in 4 weeks and RBI-run training for bank staff in 8 weeks. Police headquarters and bank nodal officers are the named buyers/users.",
+      "source": "https://www.livelaw.in/high-court/madhya-pradesh-high-court/freezing-bank-accounts-guidelines-cybercrime-complaints-grievance-redressal-543201 ; https://www.livelaw.in/high-court/rajasthan-high-court/rajasthan-high-court-account-freeze-cyber-crime-546999"
+    },
+    {
+      "fact": "Headlines seen, pages not opened (do not quote as facts without opening): PIB 'DFS Secretary chairs follow-up meeting with stakeholders from 12 organisations on Cyber Security in Financial Services Sector' (21 May 2025); Economic Times 'Banks in direct link-up with I4C to check fraud on accounts' (17 Mar 2025); New Indian Express 'MHA unit for real-time mitigation of online fraud, banks to link database' (25 Apr 2024); New Indian Express 'Odisha govt to set up State Cyber Crime Coordination Centre' (27 Jun 2026).",
+      "source": "Google News RSS discovery (links not resolvable, rate limited)"
+    }
+  ],
+  "notes": "NOT VERIFIED / NOT FOUND: (1) Number of banks and financial intermediaries onboarded to CFCFRMS: no figure found; use 69 banks (grievance portal) / 57 banks (restoration portal) from the SC status report as proxies. (2) RBI primary counts of SCBs/SFBs/payments banks/RRBs/UCBs: RBI pages did not give category counts; table is from Wikipedia and has internal inconsistencies, say 'approx.'. (3) Number of state/UT cyber police stations/units: not found. (4) Accounts frozen nationally and petition count nationally: not published; only the Rs 8,189 crore LIEN-marked amount (Lok Sabha) and per-case examples exist. (5) Merchant/MSME or UPI-merchant freeze counts: not found, only case examples. (6) MuleHunter.AI cost, Indian bank tender/GeM values for fraud risk management systems, IBA/NPCI partnership with I4C: not found (search tooling was degraded: Brave rate-limited, DuckDuckGo/Bing returned irrelevant results; Google News RSS gave headlines only). (7) UK delay powers (Payment Services (Amendment) Regulations 2024, up to 4 business days for suspected APP fraud) and Pay.UK/Faster Payments measures: the gov.uk and legislation.gov.uk pages did not load, so not claimed. (8) EU PSR/PSD3 content, FinCEN 314(b) participant count, Zelle CFPB suit status and AFCX/FRX volume figures: not verified. (9) Nebius Llama 70B price: Nebius Token Factory price page is a JavaScript app and could not be read; OpenRouter list used as the market range instead. (10) RDS/Aurora PostgreSQL Mumbai price not retrieved; Azure PG used. (11) 'Saved' (Rs 11,158 cr) is cumulative amount stopped, not money restored; keep the contrast with Rs 18.05 cr restored explicit. (12) Derived ratios (14.9%, 2.97%, 0.16%, monthly instance cost) are our arithmetic; label them as such. Several benchmark pages were opened via curl rather than WebFetch because WebFetch blocks bbc.com, channelnewsasia.com and straitstimes.com."
+}

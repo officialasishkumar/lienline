@@ -1,0 +1,1860 @@
+{
+ "case_id": "c1-archana",
+ "title": "₹980 dispute, ₹2.51 crore frozen",
+ "summary": "A ₹980 UPI sale at a liquor shop froze its ₹2.51 crore business account; the trail shows only ₹980 is traceable.",
+ "generated_at": "2026-10-11T18:30:00+05:30",
+ "model": {
+  "backend": "ollama",
+  "chat_model": "gemma4:e4b",
+  "calls": 7,
+  "tokens": 12345
+ },
+ "complaint": {
+  "ack_no": "31509240012345",
+  "filed_at": "2026-10-03T13:05:00+05:30",
+  "victim": {
+   "name": "R. Choudhary",
+   "account_id": "A1"
+  },
+  "amount_lost": 9800000,
+  "channel": "UPI",
+  "narrative": "I got a call from a 'customs officer' saying my courier parcel had drugs. To clear it I paid Rs 98,000 by UPI to the account he gave. Then he stopped answering.",
+  "police_station": "Cyber PS, Bhopal",
+  "io": "SI R. Verma"
+ },
+ "notice": {
+  "text": "Under Section 106 BNSS you are directed to place a debit freeze on the following accounts which received proceeds of cyber fraud (NCRP 31509240012345): Kotak XXXX0918 (Rs 98,000, UTR 426812340101), Axis XXXX5562 (Rs 45,000, UTR 426812340203), HDFC XXXX4421 (Rs 980, UTR 426812340266; UTR 426812349999).",
+  "issued_at": "2026-10-04T16:30:00+05:30",
+  "section": "106 BNSS",
+  "flagged": [
+   {
+    "account_id": "A2",
+    "amount": 9800000
+   },
+   {
+    "account_id": "A4",
+    "amount": 4500000
+   },
+   {
+    "account_id": "A3",
+    "amount": 98000
+   }
+  ]
+ },
+ "banks": [
+  {
+   "id": "SBI",
+   "name": "State Bank of India",
+   "kind": "public"
+  },
+  {
+   "id": "KOTAK",
+   "name": "Kotak Mahindra Bank",
+   "kind": "private"
+  },
+  {
+   "id": "HDFC",
+   "name": "HDFC Bank",
+   "kind": "private"
+  },
+  {
+   "id": "AXIS",
+   "name": "Axis Bank",
+   "kind": "private"
+  },
+  {
+   "id": "ICICI",
+   "name": "ICICI Bank",
+   "kind": "private"
+  },
+  {
+   "id": "PNB",
+   "name": "Punjab National Bank",
+   "kind": "public"
+  },
+  {
+   "id": "BOB",
+   "name": "Bank of Baroda",
+   "kind": "public"
+  },
+  {
+   "id": "FINO",
+   "name": "Fino Payments Bank",
+   "kind": "payments"
+  }
+ ],
+ "accounts": [
+  {
+   "id": "A1",
+   "bank": "SBI",
+   "masked": "XXXX7310",
+   "holder": "R. Choudhary",
+   "kind": "savings",
+   "role": "victim",
+   "kyc_age_days": 5200,
+   "opening_balance": 34000000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A2",
+   "bank": "KOTAK",
+   "masked": "XXXX0918",
+   "holder": "Vikas Kumar",
+   "kind": "savings",
+   "role": "mule_l1",
+   "kyc_age_days": 19,
+   "opening_balance": 120000,
+   "complaints_linked": 3,
+   "registry_hit": true
+  },
+  {
+   "id": "A4",
+   "bank": "AXIS",
+   "masked": "XXXX5562",
+   "holder": "Sunita Traders",
+   "kind": "current",
+   "role": "mule_l2",
+   "kyc_age_days": 41,
+   "opening_balance": 300000,
+   "complaints_linked": 1,
+   "registry_hit": false
+  },
+  {
+   "id": "E1",
+   "bank": "FINO",
+   "masked": "XXXX2207",
+   "holder": "Wallet top-up (ledger not received)",
+   "kind": "wallet",
+   "role": "mule_l2",
+   "kyc_age_days": 12,
+   "opening_balance": 0,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "X1",
+   "bank": "KOTAK",
+   "masked": "ATM-BPL-114",
+   "holder": "ATM cash withdrawal, Bhopal",
+   "kind": "atm",
+   "role": "cashout",
+   "kyc_age_days": 0,
+   "opening_balance": 0,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "X2",
+   "bank": "AXIS",
+   "masked": "ATM-IDR-031",
+   "holder": "ATM cash withdrawal, Indore",
+   "kind": "atm",
+   "role": "cashout",
+   "kyc_age_days": 0,
+   "opening_balance": 0,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A3",
+   "bank": "HDFC",
+   "masked": "XXXX4421",
+   "holder": "Shree Balaji Wines",
+   "kind": "current",
+   "role": "merchant",
+   "kyc_age_days": 2900,
+   "opening_balance": 2486000000,
+   "complaints_linked": 1,
+   "registry_hit": false
+  },
+  {
+   "id": "A5",
+   "bank": "ICICI",
+   "masked": "XXXX8830",
+   "holder": "Jain Jewellers",
+   "kind": "current",
+   "role": "merchant",
+   "kyc_age_days": 3650,
+   "opening_balance": 184000000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A6",
+   "bank": "PNB",
+   "masked": "XXXX1147",
+   "holder": "Gupta Kirana Store",
+   "kind": "current",
+   "role": "innocent",
+   "kyc_age_days": 2100,
+   "opening_balance": 21000000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A7",
+   "bank": "BOB",
+   "masked": "XXXX6054",
+   "holder": "MP Beverages Distributors",
+   "kind": "current",
+   "role": "merchant",
+   "kyc_age_days": 4000,
+   "opening_balance": 1200000000,
+   "complaints_linked": 0,
+   "registry_hit": false
+  },
+  {
+   "id": "A8",
+   "bank": "HDFC",
+   "masked": "POS-SETTLE",
+   "holder": "Card sales settlement (acquirer)",
+   "kind": "pool",
+   "role": "innocent",
+   "kyc_age_days": 4000,
+   "opening_balance": 0,
+   "complaints_linked": 0,
+   "registry_hit": false
+  }
+ ],
+ "transactions": [
+  {
+   "id": "T9",
+   "utr": "N26810311782",
+   "ts": "2026-10-03T06:30:00+05:30",
+   "from": "A8",
+   "to": "A3",
+   "amount": 423902000,
+   "channel": "NEFT",
+   "tainted_origin": false,
+   "note": "Card sales settlement for 2 Oct"
+  },
+  {
+   "id": "T1",
+   "utr": "426812340101",
+   "ts": "2026-10-03T09:12:40+05:30",
+   "from": "A1",
+   "to": "A2",
+   "amount": 9800000,
+   "channel": "UPI",
+   "tainted_origin": true,
+   "note": "Victim pays 'customs officer' for a held courier parcel"
+  },
+  {
+   "id": "T2",
+   "utr": "426812340177",
+   "ts": "2026-10-03T09:19:05+05:30",
+   "from": "A2",
+   "to": "X1",
+   "amount": 3000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "Cash withdrawal 7 minutes after credit"
+  },
+  {
+   "id": "T3",
+   "utr": "426812340203",
+   "ts": "2026-10-03T09:26:51+05:30",
+   "from": "A2",
+   "to": "A4",
+   "amount": 4500000,
+   "channel": "IMPS",
+   "tainted_origin": false,
+   "note": "Onward transfer to second-layer account"
+  },
+  {
+   "id": "T4",
+   "utr": "426812340266",
+   "ts": "2026-10-03T09:41:12+05:30",
+   "from": "A2",
+   "to": "A3",
+   "amount": 98000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "UPI payment at liquor shop counter"
+  },
+  {
+   "id": "T5",
+   "utr": "426812340291",
+   "ts": "2026-10-03T09:58:30+05:30",
+   "from": "A2",
+   "to": "A6",
+   "amount": 145000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "Groceries"
+  },
+  {
+   "id": "T6",
+   "utr": "426812340344",
+   "ts": "2026-10-03T10:20:00+05:30",
+   "from": "A4",
+   "to": "X2",
+   "amount": 2000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "Cash withdrawal, Indore"
+  },
+  {
+   "id": "T7",
+   "utr": "426812340389",
+   "ts": "2026-10-03T10:44:18+05:30",
+   "from": "A4",
+   "to": "A5",
+   "amount": 1500000,
+   "channel": "UPI",
+   "tainted_origin": false,
+   "note": "Gold coin purchase"
+  },
+  {
+   "id": "T8",
+   "utr": "426812340412",
+   "ts": "2026-10-03T11:02:09+05:30",
+   "from": "A4",
+   "to": "E1",
+   "amount": 200000,
+   "channel": "IMPS",
+   "tainted_origin": false,
+   "note": "Wallet top-up; wallet ledger not received"
+  },
+  {
+   "id": "T10",
+   "utr": "HDFCR52026100411",
+   "ts": "2026-10-04T11:05:44+05:30",
+   "from": "A3",
+   "to": "A7",
+   "amount": 400000000,
+   "channel": "RTGS",
+   "tainted_origin": false,
+   "note": "Supplier payment, invoice MPBD/2026/8812"
+  },
+  {
+   "id": "T11",
+   "utr": "426912340530",
+   "ts": "2026-10-04T12:40:31+05:30",
+   "from": "A4",
+   "to": "A2",
+   "amount": 600000,
+   "channel": "IMPS",
+   "tainted_origin": false,
+   "note": "Round-trip back to first-layer account"
+  },
+  {
+   "id": "T12",
+   "utr": "426912340577",
+   "ts": "2026-10-04T14:02:10+05:30",
+   "from": "A2",
+   "to": "X1",
+   "amount": 2000000,
+   "channel": "ATM",
+   "tainted_origin": false,
+   "note": "Second cash withdrawal"
+  }
+ ],
+ "trace": {
+  "as_of": "2026-10-11T10:00:00+05:30",
+  "rules": [
+   "FIFO",
+   "LIFO",
+   "PRO_RATA",
+   "LIBR"
+  ],
+  "policy_rule": "LIBR",
+  "accounts": {
+   "A2": {
+    "by_rule": {
+     "FIFO": 777000,
+     "LIFO": 657000,
+     "PRO_RATA": 757235,
+     "LIBR": 777000
+    },
+    "balance_now": 777000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 120000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T09:12:40+05:30",
+      "balance": 9920000,
+      "tainted": {
+       "FIFO": 9800000,
+       "LIFO": 9800000,
+       "PRO_RATA": 9800000,
+       "LIBR": 9800000
+      }
+     },
+     {
+      "ts": "2026-10-03T09:19:05+05:30",
+      "balance": 6920000,
+      "tainted": {
+       "FIFO": 6920000,
+       "LIFO": 6800000,
+       "PRO_RATA": 6836290,
+       "LIBR": 6920000
+      }
+     },
+     {
+      "ts": "2026-10-03T09:26:51+05:30",
+      "balance": 2420000,
+      "tainted": {
+       "FIFO": 2420000,
+       "LIFO": 2300000,
+       "PRO_RATA": 2390726,
+       "LIBR": 2420000
+      }
+     },
+     {
+      "ts": "2026-10-03T09:41:12+05:30",
+      "balance": 2322000,
+      "tainted": {
+       "FIFO": 2322000,
+       "LIFO": 2202000,
+       "PRO_RATA": 2293911,
+       "LIBR": 2322000
+      }
+     },
+     {
+      "ts": "2026-10-03T09:58:30+05:30",
+      "balance": 2177000,
+      "tainted": {
+       "FIFO": 2177000,
+       "LIFO": 2057000,
+       "PRO_RATA": 2150665,
+       "LIBR": 2177000
+      }
+     },
+     {
+      "ts": "2026-10-04T12:40:31+05:30",
+      "balance": 2777000,
+      "tainted": {
+       "FIFO": 2777000,
+       "LIFO": 2657000,
+       "PRO_RATA": 2706360,
+       "LIBR": 2777000
+      }
+     },
+     {
+      "ts": "2026-10-04T14:02:10+05:30",
+      "balance": 777000,
+      "tainted": {
+       "FIFO": 777000,
+       "LIFO": 657000,
+       "PRO_RATA": 757235,
+       "LIBR": 777000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 777000,
+      "tainted": {
+       "FIFO": 777000,
+       "LIFO": 657000,
+       "PRO_RATA": 757235,
+       "LIBR": 777000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T2",
+      "to": "X1",
+      "tainted": {
+       "FIFO": 2880000,
+       "LIFO": 3000000,
+       "PRO_RATA": 2963710,
+       "LIBR": 2880000
+      }
+     },
+     {
+      "txn": "T3",
+      "to": "A4",
+      "tainted": {
+       "FIFO": 4500000,
+       "LIFO": 4500000,
+       "PRO_RATA": 4445564,
+       "LIBR": 4500000
+      }
+     },
+     {
+      "txn": "T4",
+      "to": "A3",
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 96815,
+       "LIBR": 98000
+      }
+     },
+     {
+      "txn": "T5",
+      "to": "A6",
+      "tainted": {
+       "FIFO": 145000,
+       "LIFO": 145000,
+       "PRO_RATA": 143246,
+       "LIBR": 145000
+      }
+     },
+     {
+      "txn": "T12",
+      "to": "X1",
+      "tainted": {
+       "FIFO": 2000000,
+       "LIFO": 2000000,
+       "PRO_RATA": 1949125,
+       "LIBR": 2000000
+      }
+     }
+    ]
+   },
+   "A4": {
+    "by_rule": {
+     "FIFO": 500000,
+     "LIFO": 200000,
+     "PRO_RATA": 463080,
+     "LIBR": 500000
+    },
+    "balance_now": 500000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 300000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T09:26:51+05:30",
+      "balance": 4800000,
+      "tainted": {
+       "FIFO": 4500000,
+       "LIFO": 4500000,
+       "PRO_RATA": 4445564,
+       "LIBR": 4500000
+      }
+     },
+     {
+      "ts": "2026-10-03T10:20:00+05:30",
+      "balance": 2800000,
+      "tainted": {
+       "FIFO": 2800000,
+       "LIFO": 2500000,
+       "PRO_RATA": 2593246,
+       "LIBR": 2800000
+      }
+     },
+     {
+      "ts": "2026-10-03T10:44:18+05:30",
+      "balance": 1300000,
+      "tainted": {
+       "FIFO": 1300000,
+       "LIFO": 1000000,
+       "PRO_RATA": 1204007,
+       "LIBR": 1300000
+      }
+     },
+     {
+      "ts": "2026-10-03T11:02:09+05:30",
+      "balance": 1100000,
+      "tainted": {
+       "FIFO": 1100000,
+       "LIFO": 800000,
+       "PRO_RATA": 1018775,
+       "LIBR": 1100000
+      }
+     },
+     {
+      "ts": "2026-10-04T12:40:31+05:30",
+      "balance": 500000,
+      "tainted": {
+       "FIFO": 500000,
+       "LIFO": 200000,
+       "PRO_RATA": 463080,
+       "LIBR": 500000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 500000,
+      "tainted": {
+       "FIFO": 500000,
+       "LIFO": 200000,
+       "PRO_RATA": 463080,
+       "LIBR": 500000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T6",
+      "to": "X2",
+      "tainted": {
+       "FIFO": 1700000,
+       "LIFO": 2000000,
+       "PRO_RATA": 1852318,
+       "LIBR": 1700000
+      }
+     },
+     {
+      "txn": "T7",
+      "to": "A5",
+      "tainted": {
+       "FIFO": 1500000,
+       "LIFO": 1500000,
+       "PRO_RATA": 1389239,
+       "LIBR": 1500000
+      }
+     },
+     {
+      "txn": "T8",
+      "to": "E1",
+      "tainted": {
+       "FIFO": 200000,
+       "LIFO": 200000,
+       "PRO_RATA": 185232,
+       "LIBR": 200000
+      }
+     },
+     {
+      "txn": "T11",
+      "to": "A2",
+      "tainted": {
+       "FIFO": 600000,
+       "LIFO": 600000,
+       "PRO_RATA": 555695,
+       "LIBR": 600000
+      }
+     }
+    ]
+   },
+   "E1": {
+    "by_rule": {
+     "FIFO": 200000,
+     "LIFO": 200000,
+     "PRO_RATA": 185232,
+     "LIBR": 200000
+    },
+    "balance_now": 200000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 0,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T11:02:09+05:30",
+      "balance": 200000,
+      "tainted": {
+       "FIFO": 200000,
+       "LIFO": 200000,
+       "PRO_RATA": 185232,
+       "LIBR": 200000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 200000,
+      "tainted": {
+       "FIFO": 200000,
+       "LIFO": 200000,
+       "PRO_RATA": 185232,
+       "LIBR": 200000
+      }
+     }
+    ],
+    "outflows": []
+   },
+   "X1": {
+    "by_rule": {
+     "FIFO": 4880000,
+     "LIFO": 5000000,
+     "PRO_RATA": 4912835,
+     "LIBR": 4880000
+    },
+    "balance_now": 5000000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 0,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T09:19:05+05:30",
+      "balance": 3000000,
+      "tainted": {
+       "FIFO": 2880000,
+       "LIFO": 3000000,
+       "PRO_RATA": 2963710,
+       "LIBR": 2880000
+      }
+     },
+     {
+      "ts": "2026-10-04T14:02:10+05:30",
+      "balance": 5000000,
+      "tainted": {
+       "FIFO": 4880000,
+       "LIFO": 5000000,
+       "PRO_RATA": 4912835,
+       "LIBR": 4880000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 5000000,
+      "tainted": {
+       "FIFO": 4880000,
+       "LIFO": 5000000,
+       "PRO_RATA": 4912835,
+       "LIBR": 4880000
+      }
+     }
+    ],
+    "outflows": []
+   },
+   "X2": {
+    "by_rule": {
+     "FIFO": 1700000,
+     "LIFO": 2000000,
+     "PRO_RATA": 1852318,
+     "LIBR": 1700000
+    },
+    "balance_now": 2000000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 0,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T10:20:00+05:30",
+      "balance": 2000000,
+      "tainted": {
+       "FIFO": 1700000,
+       "LIFO": 2000000,
+       "PRO_RATA": 1852318,
+       "LIBR": 1700000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 2000000,
+      "tainted": {
+       "FIFO": 1700000,
+       "LIFO": 2000000,
+       "PRO_RATA": 1852318,
+       "LIBR": 1700000
+      }
+     }
+    ],
+    "outflows": []
+   },
+   "A3": {
+    "by_rule": {
+     "FIFO": 98000,
+     "LIFO": 0,
+     "PRO_RATA": 83507,
+     "LIBR": 98000
+    },
+    "balance_now": 2510000000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 2486000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T06:30:00+05:30",
+      "balance": 2909902000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T09:41:12+05:30",
+      "balance": 2910000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 98000,
+       "PRO_RATA": 96815,
+       "LIBR": 98000
+      }
+     },
+     {
+      "ts": "2026-10-04T11:05:44+05:30",
+      "balance": 2510000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 0,
+       "PRO_RATA": 83507,
+       "LIBR": 98000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 2510000000,
+      "tainted": {
+       "FIFO": 98000,
+       "LIFO": 0,
+       "PRO_RATA": 83507,
+       "LIBR": 98000
+      }
+     }
+    ],
+    "outflows": [
+     {
+      "txn": "T10",
+      "to": "A7",
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 98000,
+       "PRO_RATA": 13308,
+       "LIBR": 0
+      }
+     }
+    ]
+   },
+   "A5": {
+    "by_rule": {
+     "FIFO": 1500000,
+     "LIFO": 1500000,
+     "PRO_RATA": 1389239,
+     "LIBR": 1500000
+    },
+    "balance_now": 185500000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 184000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T10:44:18+05:30",
+      "balance": 185500000,
+      "tainted": {
+       "FIFO": 1500000,
+       "LIFO": 1500000,
+       "PRO_RATA": 1389239,
+       "LIBR": 1500000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 185500000,
+      "tainted": {
+       "FIFO": 1500000,
+       "LIFO": 1500000,
+       "PRO_RATA": 1389239,
+       "LIBR": 1500000
+      }
+     }
+    ],
+    "outflows": []
+   },
+   "A6": {
+    "by_rule": {
+     "FIFO": 145000,
+     "LIFO": 145000,
+     "PRO_RATA": 143246,
+     "LIBR": 145000
+    },
+    "balance_now": 21145000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 21000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-03T09:58:30+05:30",
+      "balance": 21145000,
+      "tainted": {
+       "FIFO": 145000,
+       "LIFO": 145000,
+       "PRO_RATA": 143246,
+       "LIBR": 145000
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 21145000,
+      "tainted": {
+       "FIFO": 145000,
+       "LIFO": 145000,
+       "PRO_RATA": 143246,
+       "LIBR": 145000
+      }
+     }
+    ],
+    "outflows": []
+   },
+   "A7": {
+    "by_rule": {
+     "FIFO": 0,
+     "LIFO": 98000,
+     "PRO_RATA": 13308,
+     "LIBR": 0
+    },
+    "balance_now": 1600000000,
+    "series": [
+     {
+      "ts": "2026-10-03T00:00:00+05:30",
+      "balance": 1200000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 0,
+       "PRO_RATA": 0,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-04T11:05:44+05:30",
+      "balance": 1600000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 98000,
+       "PRO_RATA": 13308,
+       "LIBR": 0
+      }
+     },
+     {
+      "ts": "2026-10-11T10:00:00+05:30",
+      "balance": 1600000000,
+      "tainted": {
+       "FIFO": 0,
+       "LIFO": 98000,
+       "PRO_RATA": 13308,
+       "LIBR": 0
+      }
+     }
+    ],
+    "outflows": []
+   }
+  },
+  "edges": [
+   {
+    "txn": "T9",
+    "from": "A8",
+    "to": "A3",
+    "amount": 423902000,
+    "tainted": {
+     "FIFO": 0,
+     "LIFO": 0,
+     "PRO_RATA": 0,
+     "LIBR": 0
+    }
+   },
+   {
+    "txn": "T1",
+    "from": "A1",
+    "to": "A2",
+    "amount": 9800000,
+    "tainted": {
+     "FIFO": 9800000,
+     "LIFO": 9800000,
+     "PRO_RATA": 9800000,
+     "LIBR": 9800000
+    }
+   },
+   {
+    "txn": "T2",
+    "from": "A2",
+    "to": "X1",
+    "amount": 3000000,
+    "tainted": {
+     "FIFO": 2880000,
+     "LIFO": 3000000,
+     "PRO_RATA": 2963710,
+     "LIBR": 2880000
+    }
+   },
+   {
+    "txn": "T3",
+    "from": "A2",
+    "to": "A4",
+    "amount": 4500000,
+    "tainted": {
+     "FIFO": 4500000,
+     "LIFO": 4500000,
+     "PRO_RATA": 4445564,
+     "LIBR": 4500000
+    }
+   },
+   {
+    "txn": "T4",
+    "from": "A2",
+    "to": "A3",
+    "amount": 98000,
+    "tainted": {
+     "FIFO": 98000,
+     "LIFO": 98000,
+     "PRO_RATA": 96815,
+     "LIBR": 98000
+    }
+   },
+   {
+    "txn": "T5",
+    "from": "A2",
+    "to": "A6",
+    "amount": 145000,
+    "tainted": {
+     "FIFO": 145000,
+     "LIFO": 145000,
+     "PRO_RATA": 143246,
+     "LIBR": 145000
+    }
+   },
+   {
+    "txn": "T6",
+    "from": "A4",
+    "to": "X2",
+    "amount": 2000000,
+    "tainted": {
+     "FIFO": 1700000,
+     "LIFO": 2000000,
+     "PRO_RATA": 1852318,
+     "LIBR": 1700000
+    }
+   },
+   {
+    "txn": "T7",
+    "from": "A4",
+    "to": "A5",
+    "amount": 1500000,
+    "tainted": {
+     "FIFO": 1500000,
+     "LIFO": 1500000,
+     "PRO_RATA": 1389239,
+     "LIBR": 1500000
+    }
+   },
+   {
+    "txn": "T8",
+    "from": "A4",
+    "to": "E1",
+    "amount": 200000,
+    "tainted": {
+     "FIFO": 200000,
+     "LIFO": 200000,
+     "PRO_RATA": 185232,
+     "LIBR": 200000
+    }
+   },
+   {
+    "txn": "T10",
+    "from": "A3",
+    "to": "A7",
+    "amount": 400000000,
+    "tainted": {
+     "FIFO": 0,
+     "LIFO": 98000,
+     "PRO_RATA": 13308,
+     "LIBR": 0
+    }
+   },
+   {
+    "txn": "T11",
+    "from": "A4",
+    "to": "A2",
+    "amount": 600000,
+    "tainted": {
+     "FIFO": 600000,
+     "LIFO": 600000,
+     "PRO_RATA": 555695,
+     "LIBR": 600000
+    }
+   },
+   {
+    "txn": "T12",
+    "from": "A2",
+    "to": "X1",
+    "amount": 2000000,
+    "tainted": {
+     "FIFO": 2000000,
+     "LIFO": 2000000,
+     "PRO_RATA": 1949125,
+     "LIBR": 2000000
+    }
+   }
+  ],
+  "conservation": {
+   "lost": 9800000,
+   "held": 3020000,
+   "cashed_out": 6580000,
+   "untraced": 200000
+  }
+ },
+ "decisions": [
+  {
+   "account_id": "A3",
+   "action": "lien",
+   "amount": 98000,
+   "current_hold": 2510000000,
+   "released_by_change": 2509902000,
+   "reasons": [
+    {
+     "text": "Only Rs 980 of the victim's money is traceable into this account (UPI 426812340266).",
+     "refs": [
+      "T4",
+      "A3"
+     ]
+    },
+    {
+     "text": "The balance never fell below Rs 980 after the credit, so under the lowest-intermediate-balance rule the full Rs 980 is still identifiable here.",
+     "refs": [
+      "A3"
+     ]
+    },
+    {
+     "text": "The rest of the Rs 2,51,00,000 balance is 8 years of liquor-shop turnover with no link to the complaint; Archana v State of MP (MP HC, 27 Jul 2026) bars freezing it.",
+     "refs": [
+      "A3",
+      "T9"
+     ]
+    }
+   ],
+   "confidence": "high",
+   "range": {
+    "min": 0,
+    "max": 98000
+   }
+  },
+  {
+   "account_id": "A2",
+   "action": "full_freeze",
+   "amount": 777000,
+   "current_hold": 777000,
+   "released_by_change": 0,
+   "reasons": [
+    {
+     "text": "Account opened 19 days before the fraud; 99% of the credit left within 50 minutes (pass-through).",
+     "refs": [
+      "A2",
+      "T1",
+      "T2",
+      "T3"
+     ]
+    },
+    {
+     "text": "Linked to 3 complaints on NCRP and present in the I4C suspect registry.",
+     "refs": [
+      "A2"
+     ]
+    },
+    {
+     "text": "Received a round-trip transfer back from the second-layer account.",
+     "refs": [
+      "T11",
+      "A4"
+     ]
+    }
+   ],
+   "confidence": "high",
+   "range": {
+    "min": 657000,
+    "max": 777000
+   }
+  },
+  {
+   "account_id": "A4",
+   "action": "lien",
+   "amount": 500000,
+   "current_hold": 500000,
+   "released_by_change": 0,
+   "reasons": [
+    {
+     "text": "Rs 5,000 traceable under LIBR; the account's entire balance is victim money.",
+     "refs": [
+      "A4",
+      "T3"
+     ]
+    },
+    {
+     "text": "Only 1 linked complaint and no registry hit, so a full freeze is not justified; the lien equals the balance anyway.",
+     "refs": [
+      "A4"
+     ]
+    }
+   ],
+   "confidence": "high",
+   "range": {
+    "min": 200000,
+    "max": 500000
+   }
+  },
+  {
+   "account_id": "A5",
+   "action": "lien",
+   "amount": 1500000,
+   "current_hold": 185500000,
+   "released_by_change": 184000000,
+   "reasons": [
+    {
+     "text": "Jewellers received Rs 15,000 for a gold coin from the second-layer account.",
+     "refs": [
+      "T7",
+      "A4",
+      "A5"
+     ]
+    },
+    {
+     "text": "Lien Rs 15,000; release the remaining Rs 18,40,000 of business balance.",
+     "refs": [
+      "A5"
+     ]
+    }
+   ],
+   "confidence": "high",
+   "range": {
+    "min": 1389239,
+    "max": 1500000
+   }
+  },
+  {
+   "account_id": "A6",
+   "action": "lien",
+   "amount": 145000,
+   "current_hold": 21145000,
+   "released_by_change": 21000000,
+   "reasons": [
+    {
+     "text": "Kirana store was paid Rs 1,450 for groceries with victim money.",
+     "refs": [
+      "T5",
+      "A6"
+     ]
+    },
+    {
+     "text": "A shopkeeper paid for goods is a bona fide recipient; lien kept only until the IO decides restitution.",
+     "refs": [
+      "A6"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "range": {
+    "min": 143246,
+    "max": 145000
+   }
+  },
+  {
+   "account_id": "A7",
+   "action": "release",
+   "amount": 0,
+   "current_hold": 0,
+   "released_by_change": 0,
+   "reasons": [
+    {
+     "text": "Under LIBR none of the victim's money reached the distributor: the Rs 980 never left Shree Balaji Wines' balance.",
+     "refs": [
+      "T10",
+      "A3",
+      "A7"
+     ]
+    },
+    {
+     "text": "LIFO would attribute Rs 980 to this account; the rules disagree, so the legal standard (LIBR) decides.",
+     "refs": [
+      "A7"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "range": {
+    "min": 0,
+    "max": 98000
+   }
+  }
+ ],
+ "clocks": [
+  {
+   "id": "notice_ack",
+   "account_id": "A3",
+   "label": "Acknowledge police notice on CFCFRMS",
+   "start": "2026-10-04T16:30:00+05:30",
+   "due": "2026-10-05T16:30:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026 (bank action on notice)",
+   "source": "https://cybercrime.gov.in/",
+   "status": "met"
+  },
+  {
+   "id": "holder_informed",
+   "account_id": "A3",
+   "label": "Inform account holder of the hold and the reason",
+   "start": "2026-10-04T17:10:00+05:30",
+   "due": "2026-10-05T17:10:00+05:30",
+   "rule": "Shree Balaji Enterprises v RBI (Raj HC, 20 Aug 2026), guideline on notice to holder",
+   "source": "https://hcraj.nic.in/",
+   "status": "breached"
+  },
+  {
+   "id": "lien_conversion",
+   "account_id": "A3",
+   "label": "Convert full freeze to lien of identifiable amount",
+   "start": "2026-10-09T11:00:00+05:30",
+   "due": "2026-10-11T23:00:00+05:30",
+   "rule": "Archana v State of MP (MP HC, 27 Jul 2026): lien only the disputed amount",
+   "source": "https://mphc.gov.in/",
+   "status": "running"
+  },
+  {
+   "id": "grievance_forward",
+   "account_id": "A3",
+   "label": "Forward holder's grievance to IO",
+   "start": "2026-10-09T11:00:00+05:30",
+   "due": "2026-10-16T11:00:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026: grievance clock, 7 days",
+   "source": "https://cybercrime.gov.in/",
+   "status": "running"
+  },
+  {
+   "id": "io_confirm",
+   "account_id": "A5",
+   "label": "IO to confirm or modify the hold",
+   "start": "2026-10-04T16:30:00+05:30",
+   "due": "2026-10-19T16:30:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026: 15 days",
+   "source": "https://cybercrime.gov.in/",
+   "status": "running"
+  },
+  {
+   "id": "hold_lapse",
+   "account_id": "A2",
+   "label": "Hold lapses without court order",
+   "start": "2026-10-04T16:30:00+05:30",
+   "due": "2027-01-02T16:30:00+05:30",
+   "rule": "MHA/I4C SOP 2 Jan 2026: 90 days",
+   "source": "https://cybercrime.gov.in/",
+   "status": "running"
+  }
+ ],
+ "events": [
+  {
+   "t": 0.0,
+   "agent": "Intake",
+   "kind": "model",
+   "type": "start",
+   "text": "Reading the Section 106 BNSS notice and the NCRP complaint 31509240012345.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 2.1,
+   "agent": "Intake",
+   "kind": "model",
+   "type": "message",
+   "text": "Notice names 3 accounts at 3 banks. Complainant lost Rs 98,000 over UPI to a fake customs officer.",
+   "refs": [
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 4.0,
+   "agent": "Intake",
+   "kind": "model",
+   "type": "tool",
+   "text": "Extracted 4 UTRs and 3 amounts from the notice text.",
+   "refs": [
+    "T1",
+    "T3",
+    "T4"
+   ],
+   "data": {
+    "utrs": 4
+   },
+   "ok": true
+  },
+  {
+   "t": 5.2,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "UTR 426812340101 found in SBI ledger: Rs 98,000 from A1 to A2.",
+   "refs": [
+    "T1"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 5.9,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "UTR 426812340266 found in Kotak ledger: Rs 980 from A2 to A3.",
+   "refs": [
+    "T4"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 6.6,
+   "agent": "Intake",
+   "kind": "code",
+   "type": "check",
+   "text": "UTR 426812349999 quoted in notice is not in any ledger; dropped as a typo, IO to confirm.",
+   "refs": [],
+   "data": {
+    "reason": "unknown UTR"
+   },
+   "ok": false
+  },
+  {
+   "t": 8.0,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "start",
+   "text": "Replaying 12 transactions across 8 banks in chronological order, 4 rules in parallel.",
+   "refs": [
+    "T1"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 10.4,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "tool",
+   "text": "Hop 1: Kotak XXXX0918 receives Rs 98,000; 4 outflows within 46 minutes.",
+   "refs": [
+    "A2",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 12.2,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "tool",
+   "text": "Hop 2: Axis XXXX5562 receives Rs 45,000; Rs 20,000 cash, Rs 15,000 to jewellers, Rs 2,000 to a wallet.",
+   "refs": [
+    "A4",
+    "T6",
+    "T7",
+    "T8"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 13.9,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "result",
+   "text": "Rules disagree at Shree Balaji Wines: FIFO Rs 980, LIFO Rs 0, pro-rata Rs 835.07, LIBR Rs 980.",
+   "refs": [
+    "A3",
+    "T10"
+   ],
+   "data": {
+    "rule_spread": true
+   },
+   "ok": true
+  },
+  {
+   "t": 15.0,
+   "agent": "Tracer",
+   "kind": "code",
+   "type": "check",
+   "text": "Conservation holds under every rule: held + cashed out + untraced = Rs 98,000.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 16.5,
+   "agent": "Pattern analyst",
+   "kind": "code",
+   "type": "tool",
+   "text": "Signals for XXXX0918: KYC 19 days, pass-through 99%, 3 complaints, registry hit.",
+   "refs": [
+    "A2"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 18.0,
+   "agent": "Pattern analyst",
+   "kind": "model",
+   "type": "message",
+   "text": "Kotak XXXX0918 looks like a rented first-layer mule. Shree Balaji Wines shows 8 years of steady liquor turnover; the Rs 980 is one counter sale.",
+   "refs": [
+    "A2",
+    "A3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 20.2,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "Freeze all of Shree Balaji Wines: it holds Rs 45,000 of proceeds per T13.",
+   "refs": [
+    "A3"
+   ],
+   "data": {
+    "reason": "T13 does not exist; trace shows Rs 980 traceable"
+   },
+   "ok": false
+  },
+  {
+   "t": 21.4,
+   "agent": "Victim's advocate",
+   "kind": "code",
+   "type": "check",
+   "text": "Rejected: citation T13 not in ledgers, amount does not match trace.",
+   "refs": [
+    "A3"
+   ],
+   "data": {},
+   "ok": false
+  },
+  {
+   "t": 23.0,
+   "agent": "Account holder's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "Lien on Shree Balaji Wines should be Rs 0: under LIFO the Rs 980 left with the RTGS to the distributor.",
+   "refs": [
+    "A3",
+    "T10",
+    "A7"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 24.1,
+   "agent": "Account holder's advocate",
+   "kind": "code",
+   "type": "check",
+   "text": "Citations valid; LIFO figure Rs 0 matches the trace. Logged as a rule disagreement.",
+   "refs": [
+    "T10"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 25.6,
+   "agent": "Victim's advocate",
+   "kind": "model",
+   "type": "debate",
+   "text": "Then lien the Rs 980 at the distributor too, in case LIFO is right.",
+   "refs": [
+    "A7"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 26.5,
+   "agent": "Victim's advocate",
+   "kind": "code",
+   "type": "check",
+   "text": "Valid citation; LIFO figure Rs 980 at A7 matches. Decider applies the policy rule.",
+   "refs": [
+    "A7"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 28.0,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "Policy rule LIBR (legal tracing standard): lien Rs 980 on Shree Balaji Wines, release Rs 2,50,99,020.",
+   "refs": [
+    "A3"
+   ],
+   "data": {
+    "action": "lien"
+   },
+   "ok": true
+  },
+  {
+   "t": 29.3,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "Kotak XXXX0918: full freeze justified (registry hit + 3 complaints + 99% pass-through).",
+   "refs": [
+    "A2"
+   ],
+   "data": {
+    "action": "full_freeze"
+   },
+   "ok": true
+  },
+  {
+   "t": 30.4,
+   "agent": "Decider",
+   "kind": "code",
+   "type": "result",
+   "text": "Distributor A7: release, 0 traceable under LIBR.",
+   "refs": [
+    "A7"
+   ],
+   "data": {
+    "action": "release"
+   },
+   "ok": true
+  },
+  {
+   "t": 31.8,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "tool",
+   "text": "6 deadlines set. Conversion to lien on Shree Balaji Wines is due tonight, 23:00.",
+   "refs": [
+    "A3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 33.0,
+   "agent": "Clock keeper",
+   "kind": "code",
+   "type": "check",
+   "text": "Holder was not told of the freeze within 24 hours: guideline breached.",
+   "refs": [
+    "A3"
+   ],
+   "data": {},
+   "ok": false
+  },
+  {
+   "t": 34.6,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "Drafting lien instruction to HDFC Bank, Arera Colony branch.",
+   "refs": [
+    "A3"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 37.2,
+   "agent": "Drafter",
+   "kind": "model",
+   "type": "letter",
+   "text": "Drafting release notice to Shree Balaji Wines and full-freeze justification to Kotak.",
+   "refs": [
+    "A3",
+    "A2"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 38.4,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "Letter L1: 4 numbers checked against decision and ledger.",
+   "refs": [
+    "A3",
+    "T4"
+   ],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 39.1,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "Letter L2: draft said Rs 2,51,00,000 released; corrected to Rs 2,50,99,020.",
+   "refs": [
+    "A3"
+   ],
+   "data": {
+    "reason": "number mismatch, auto-corrected"
+   },
+   "ok": false
+  },
+  {
+   "t": 40.3,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "check",
+   "text": "Independent replay matches the Tracer on all 12 transactions and 4 rules.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 41.0,
+   "agent": "Verifier",
+   "kind": "code",
+   "type": "result",
+   "text": "All 7 checks passed. Ready for the nodal officer.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  },
+  {
+   "t": 42.5,
+   "agent": "Nodal officer",
+   "kind": "human",
+   "type": "approval",
+   "text": "Awaiting approval of 6 decisions and 5 letters.",
+   "refs": [],
+   "data": {},
+   "ok": true
+  }
+ ],
+ "letters": [
+  {
+   "id": "L1",
+   "account_id": "A3",
+   "kind": "lien_instruction",
+   "to": "Branch Manager, HDFC Bank, Arera Colony, Bhopal",
+   "subject": "Convert debit freeze to lien of Rs 980 on current account XXXX4421 (Shree Balaji Wines)",
+   "body": "Ref: NCRP acknowledgement 31509240012345; notice under Section 106 BNSS dated 04.10.2026 from Cyber PS, Bhopal.\n\nThe account XXXX4421 is presently under a full debit freeze of Rs 2,51,00,000. Tracing of the complainant's funds shows that only Rs 980 was credited to this account, by UPI 426812340266 on 03.10.2026 at 09:41 hrs. The account balance did not fall below that amount at any time thereafter.\n\nYou are requested to (i) mark a lien of Rs 980 on the account, and (ii) lift the debit freeze on the remaining balance of Rs 2,50,99,020 with immediate effect, in line with Archana v State of MP (MP High Court, 27.07.2026).\n\nKindly confirm compliance on CFCFRMS within 24 hours.",
+   "verified": true,
+   "numbers_checked": 4
+  },
+  {
+   "id": "L2",
+   "account_id": "A3",
+   "kind": "release_notice",
+   "to": "Shree Balaji Wines, 14 Hamidia Road, Bhopal",
+   "subject": "Release of debit freeze on your account XXXX4421",
+   "body": "Your current account XXXX4421 was frozen on 04.10.2026 following a police notice about a cyber-fraud complaint.\n\nOur review found that Rs 980 received by UPI on 03.10.2026 is linked to the complaint. A lien of Rs 980 has been marked for that amount only. The freeze on the remaining Rs 2,50,99,020 has been lifted and you may operate the account normally.\n\nIf you dispute the lien, you may write to the Investigating Officer, SI R. Verma, Cyber PS Bhopal, quoting acknowledgement 31509240012345.",
+   "verified": true,
+   "numbers_checked": 3
+  },
+  {
+   "id": "L3",
+   "account_id": "A2",
+   "kind": "full_freeze_justification",
+   "to": "Nodal Officer, Kotak Mahindra Bank",
+   "subject": "Justification for continuing full freeze on savings account XXXX0918",
+   "body": "The account XXXX0918 received Rs 98,000 from the complainant on 03.10.2026 (UPI 426812340101) and passed on 99% of it within 50 minutes: Rs 30,000 by ATM, Rs 45,000 by IMPS to Axis XXXX5562, and smaller UPI payments.\n\nThe account was opened 19 days before the fraud, is linked to 3 complaints on NCRP and appears in the I4C suspect registry. A full freeze of the present balance of Rs 7,770 is therefore justified under the SOP's exception for mule accounts.",
+   "verified": true,
+   "numbers_checked": 4
+  },
+  {
+   "id": "L4",
+   "account_id": "A5",
+   "kind": "lien_instruction",
+   "to": "Branch Manager, ICICI Bank, Zaveri Bazar, Indore",
+   "subject": "Lien of Rs 15,000 on current account XXXX8830 (Jain Jewellers)",
+   "body": "Funds of Rs 15,000 traceable to cyber-fraud complaint 31509240012345 were credited to XXXX8830 by UPI 426812340389 on 03.10.2026.\n\nPlease mark a lien of Rs 15,000 and release the freeze on the remaining Rs 18,40,000.",
+   "verified": true,
+   "numbers_checked": 3
+  },
+  {
+   "id": "L5",
+   "account_id": "A3",
+   "kind": "grievance_reply",
+   "to": "Shree Balaji Wines (grievance G-2026-10-0917)",
+   "subject": "Reply to your grievance dated 09.10.2026",
+   "body": "We acknowledge your grievance about the freeze on account XXXX4421. It has been forwarded to the Investigating Officer on 09.10.2026.\n\nThe freeze has been reduced to a lien of Rs 980, the only amount linked to the complaint. Rs 2,50,99,020 is available to you.",
+   "verified": true,
+   "numbers_checked": 2
+  }
+ ],
+ "verification": {
+  "passed": true,
+  "checks": [
+   {
+    "name": "conservation",
+    "ok": true,
+    "detail": "held Rs 30,200 + cashed out Rs 65,800 + untraced Rs 2,000 = lost Rs 98,000"
+   },
+   {
+    "name": "independent_replay",
+    "ok": true,
+    "detail": "12/12 transactions and 4/4 rules match the Tracer"
+   },
+   {
+    "name": "decisions_within_balance",
+    "ok": true,
+    "detail": "every lien is at most the account's balance"
+   },
+   {
+    "name": "lien_equals_policy_trace",
+    "ok": true,
+    "detail": "every lien equals the LIBR traceable amount"
+   },
+   {
+    "name": "advocate_citations",
+    "ok": true,
+    "detail": "1 of 4 advocate claims rejected for a citation that does not exist"
+   },
+   {
+    "name": "letter_numbers",
+    "ok": true,
+    "detail": "16 numbers in 5 letters match decisions; 1 auto-corrected"
+   },
+   {
+    "name": "clocks_cited",
+    "ok": true,
+    "detail": "6/6 deadlines carry a rule citation"
+   }
+  ]
+ }
+}
